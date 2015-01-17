@@ -1,0 +1,16 @@
+#navbar{
+    background-color: black;
+    min-height: 2.75em;
+    width: 100%;
+    opacity: .2;
+    position: fixed;
+}
+.navbutton{
+    font-size: 2em;
+    color: white;
+    padding: 1em;
+    font-style: italic;
+    position: relative;
+    right: 10px;
+
+}
