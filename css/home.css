@@ -1,3 +1,9 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:800italic,400,800,700);
+
+@import url(http://fonts.googleapis.com/css?family=Cardo:400,700,400italic);
+
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
 html,
 body {
     height: 100%;
@@ -5,11 +11,33 @@ body {
     margin: 0;
     padding: 0;
 }
-.intro {
-    background: url(../img/SplitShire-7907.jpg) no-repeat center center fixed;
+#intro {
+    background: url(../img/d5e1ad1d.jpg) no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    min-height: 100vh;
+    min-height: 105vh;
+}
+overlay {
+    background-color: black;
+    min-height: inherit;
+    opacity: 0.39;
+}
+#about {
+}
+#hi {
+    font-family: 'Cardo';
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    background-color: black;
+    opacity: .5;
+    width: 50%;
+    position: absolute;
+    bottom: 50vh;
+    margin-left: 25%;
+    display: none;
+}
+#projects{
 }
