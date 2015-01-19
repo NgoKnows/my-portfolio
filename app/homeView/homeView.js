@@ -1,19 +1,16 @@
 "use strict"
-
 angular.module('myPortfolio.homeView', ['ngRoute'])
-.config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/view1', {
-    templateUrl: 'view1/view1.html',
-    controller: 'View1Ctrl'
-  });
+    .config(['$routeProvider',
+        function ($routeProvider) {
+            $routeProvider.when('/homeView', {
+                templateUrl: 'app/homeView/homeView.html',
+                controller: 'HomeController'
+            });
 }])
-.controller('View1Ctrl', [function() {
+    .controller('HomeController', function ($scope) {});
 
-}]);
-
-angular.element(document).ready(function(){
-    $('#hi').fadeIn(1200);
+angular.element(document).ready(function () {
+    setTimeout(function () {
+        $('#hi').fadeIn(1200);
+    }, 800);
 });
-
-
-
