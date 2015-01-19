@@ -9,32 +9,17 @@
     <link rel="stylesheet" href="css/home.css">
 </head>
 
-<body>
-    <main>
-        <header>
-        </header>
-        <section id="intro">
-            <div id="overlay">
-                <div id="navbar">
-                    <span class="navbutton">Home</span>
-                    <span class="navbutton">About Me</span>
-                    <span class="navbutton">Projects</span>
-                    <span class="navbutton">Resume</span>
-                </div>
-                <div id="hi">Hi, I'm Alex.</div>
-            </div>
-        </section>
-        <section id="about">
-            <h1>About Me</h1>
-        </section>
-        <section id="projects">
-            <h1>Projects</h1>
-        </section>
+<body ng-app="myPortfolio">
+    <main ng-view class="slide">
 
     </main>
     <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.2/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.3.9/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.3.9/angular-route.min.js"></script>
+    <script src="https://code.angularjs.org/1.3.9/angular-animate.js"></script>
+    <script src="app/homeView/homeView.js"></script>
+    <script src="app/aboutView/aboutView.js"></script>
 
     <script src="app/app.js"></script>
 </body>
