@@ -2,17 +2,21 @@
 
 angular.module('myPortfolio', [
     'ngRoute',
-    'ngPortfolio.homeView',
-    'ngPortfolio.projectView',
-    'ngPortfolio.aboutView'
+    'ngAnimate',
+    'myPortfolio.homeView',
+    'myPortfolio.aboutView'
 ])
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/homeView'});
-}])
-angular.element(document).ready(function(){
-    $('#hi').fadeIn(1200);
-});
-
-
-
-
+}]);
+//    .config(function ($routeProvider) {
+//        $routeProvider
+//            .when('/', {
+//                templateUrl: 'app/homeView/homeView.html',
+//                controller: 'HomeController'
+//            })
+//            .when('/about', {
+//                templateUrl: 'app/aboutView/aboutView.html',
+//                controller: 'PortfolioController'
+//            })
+//    })
