@@ -1,5 +1,8 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+/*navigation*/
 #navbar{
-    background-color: black;
+/*    background-color: black;*/
     min-height: 2.75em;
     opacity: .5;
     text-align: right;
@@ -7,9 +10,10 @@
 .navbutton{
     font-size: 2em;
     font-family: 'Open Sans';
-    color: white;
+    color: Black;
     padding: 1em;
     position: relative;
+    font-weight: 700;
 }
 h1{
     color: grey;
@@ -18,3 +22,43 @@ h1{
     font-family: 'Montserrat';
     font-weight: 400
 }
+h2{
+    color: orange;
+    text-align: center;
+    font-size: 2em;
+    font-family: 'Montserrat';
+    font-weight: 400
+
+}
+
+/*slide animations*/
+.slide {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.slide.ng-enter,
+.slide.ng-leave {
+    -webkit-transition: all .75s ease;
+    -moz-transition: all .75s ease;
+    -o-transition: all .75s ease;
+    transition: all .75s ease;
+}
+.slide.ng-enter {
+    left: 100%;
+}
+.slide.ng-enter-active {
+    left: 0;
+}
+.slide.ng-leave {
+    left: 0;
+}
+.slide.ng-leave-active {
+    left: -100%;
+}
+
+a:link{
+    color: black;
+    text-decoration: none;
