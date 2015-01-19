@@ -17,14 +17,7 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    min-height: 105vh;
-}
-overlay {
-    background-color: black;
-    min-height: inherit;
-    opacity: 0.39;
-}
-#about {
+    min-height: 102vh;
 }
 #hi {
     font-family: 'Cardo';
@@ -39,5 +32,4 @@ overlay {
     margin-left: 25%;
     display: none;
 }
-#projects{
-}
+
