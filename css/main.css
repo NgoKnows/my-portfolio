@@ -1,5 +1,13 @@
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 /*navigation*/
 #navbar{
 /*    background-color: black;*/
@@ -62,3 +70,21 @@ h2{
 a:link{
     color: black;
     text-decoration: none;
+}
+#rightarrow{
+    opacity: 0.7;
+    position: absolute;
+    right: 1em;
+    bottom: 50vh;
+    max-width: 4em;
+    max-height: 4em;
+}
+#leftarrow{
+    opacity: 0.7;
+    position: absolute;
+    left: 1em;
+    bottom: 50vh;
+    max-width: 4em;
+    max-height: 4em;
+}
+
