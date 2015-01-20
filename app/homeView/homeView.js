@@ -7,10 +7,33 @@ angular.module('myPortfolio.homeView', ['ngRoute'])
                 controller: 'HomeController'
             });
 }])
-    .controller('HomeController', function ($scope) {});
+    .controller('HomeController', function ($scope, $location) {
+        $scope.left = null;
+        $scope.right = '/about';
+        $scope.slide = function (direction) {
+            if (direction === 'left' && $scope.left) {
+                console.log(direction);
+                console.log($scope.left);
+                $location.path($scope.left)
+            } else if (direction === 'right' && $scope.right) {
+                $location.path($scope.right);
+            }
+        }
+        $scope.keyPress = function (event) {
+            if (event.keyCode == 37) {
+                $scope.slide('left');
+            } else if (event.keyCode == 39) {
+                $scope.slide('right');
+            }
 
-angular.element(document).ready(function () {
-    setTimeout(function () {
-        $('#hi').fadeIn(1200);
-    }, 800);
-});
+        };
+        $scope.$on('$viewContentLoaded', function () {
+            console.log('hi');
+            setTimeout(function () {
+                $("#homeMain").focus();
+            }, 1);
+            setTimeout(function () {
+                $('#hi').fadeIn(1200);
+            }, 800);
+        });
+    });
