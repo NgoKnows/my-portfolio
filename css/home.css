@@ -17,7 +17,7 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    min-height: 102vh;
+    min-height: 100vh;
 }
 #hi {
     font-family: 'Cardo';
@@ -32,4 +32,3 @@ body {
     margin-left: 25%;
     display: none;
 }
-
