@@ -10,10 +10,9 @@
 </head>
 
 <body>
-    <main>
+    <main id="homeMain" tabindex="0" ng-keydown="keyPress($event)">
         <header>
         </header>
-
         <section id="intro">
             <div id="navbar">
                 <span class="navbutton">Home</span>
@@ -23,6 +22,9 @@
             </div>
 
             <div id="hi">Hi, I'm Alex.</div>
+            <a href="#about">
+                <img id="rightarrow" src="../../img/arrows/arrow-right3.svg">
+            </a>
         </section>
     </main>
 </body>
