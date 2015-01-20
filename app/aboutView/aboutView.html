@@ -12,10 +12,16 @@
 </head>
 
 <body>
-    <main>
+    <main id="focusAbout" tabindex="0" ng-keydown="keyPress($event)">
         <header>
         </header>
         <section>
+                        <a href="#about">
+                <img id="rightarrow" src="../../img/arrows/arrow-right3.svg">
+            </a>
+            <a href="#about">
+                <img id="leftarrow" src="../../img/arrows/arrow-left3.svg">
+            </a>
 <!--
             <div id="navbar">
                 <span class="navbutton">Home</span>
@@ -36,10 +42,5 @@
             </div>
         </section>
     </main>
-        <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-
 </body>
-
 </html>
