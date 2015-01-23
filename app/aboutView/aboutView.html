@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../css/main.css">
     <link rel="stylesheet" href="../../css/about.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css">
 
 </head>
 
@@ -16,31 +17,43 @@
         <header>
         </header>
         <section>
-                        <a href="#about">
-                <img id="rightarrow" src="../../img/arrows/arrow-right3.svg">
-            </a>
-            <a href="#about">
-                <img id="leftarrow" src="../../img/arrows/arrow-left3.svg">
-            </a>
-<!--
-            <div id="navbar">
-                <span class="navbutton">Home</span>
-                <span class="navbutton"><a href="#about">About Me</a></span>
-                <span class="navbutton">Projects</span>
-                <span class="navbutton">Resume</span>
-            </div>
--->
 
+            <img ng-click="slide('right')" id="rightarrow" src="../../img/arrows/arrow-right3.svg">
+
+            <img id="leftarrow" src="../../img/arrows/arrow-left3.svg">
+
+            <div id="navbar">
+                <span class="navbutton"><a href="#home"> Home</a></span>
+                <span class="navbutton cur"><a href="#about">About Me</a></span>
+                <span class="navbutton"><a href="#project">Projects</a></span>
+                <span class="navbutton"><a href="../../img/FINAL%20RESUME.pdf">Resume</a></span>
+            </div>
+<div class="about">
             <h1>about me</h1>
-            <div class="about row">
-                <div class="col-md-6"><h2>I'm a college student</h2></div>
-                <div class="col-md-6"> <h2>I am from</h2></div>
+            <div class="row">
+                <div class="aboutpart col-md-6">
+                    <span class="glyphicon glyphicon-book"></span>
+                    <h2>I'm a junior at the University of Washington. I study Informatics.</h2>
+                </div>
+                <div class="aboutpart col-md-6">
+                                        <span class="glyphicon glyphicon-tree-conifer"></span>
+
+                    <h2>I am from Seattle, Washington. Born and raised in the Pacific Nortwest</h2>
+                </div>
             </div>
-            <div class="about row">
-                <div class="col-md-6"><h2>I am looking for</h2></div>
-                <div class="col-md-6"><h2>hi</h2></div>
+            <div class="row">
+                <div class="aboutpart col-md-6">
+                    <span class="glyphicon glyphicon-thumbs-up"></span>
+                    <h2>I am looking for a software internship at a great company. I am really eager to learn, and am willing to work as hard as I can.</h2>
+                </div>
+                <div class="aboutpart col-md-6">
+                    <span class="glyphicon glyphicon-circle-arrow-right"></span>
+                    <h2>I love working on my side projects, which use a range of technologies. I am currently learning Android Programming.</h2>
+                </div>
             </div>
+    </div>
         </section>
     </main>
 </body>
+
 </html>
