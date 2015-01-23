@@ -1,4 +1,10 @@
 "use strict"
+//var projectnames = ["Everything Sports", "NBA Analysis and Web Crawler", "My Portfolio"]
+//var gitlink = ["https://github.com/NgoKnows/Everything-Sports","https://github.com/NgoKnows/NBA-Analysis", "https://github.com/NgoKnows/my-portfolio"]
+//var description = ["Hda", "djafsd", "dafjsfi"];
+//var a = {a: {name: "Everything Sports", description: "A application that provides users tools to help them succeed in fantasy basketball.", img: "..}, b: {name: "Everything Sports", description: "A application that provides users tools to help them succeed in fantasy basketball."}
+//}
+//var technologiesUsed = []
 angular.module('myPortfolio.projectView', ['ngRoute'])
     .config(['$routeProvider',
         function ($routeProvider) {
