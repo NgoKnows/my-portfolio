@@ -7,7 +7,7 @@
     <title>About</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../css/main.css">
-    <link rel="stylesheet" href="../../css/about.css">
+    <link rel="stylesheet" href="../../css/project.css">
 
 </head>
 
@@ -24,12 +24,13 @@
                 <span class="navbutton"><a href="../../img/FINAL%20RESUME.pdf">Resume</a></span>
             </div>
             <h1>Projects</h1>
-            <section id="projects">
-            UNDER CONSTRUCTION
-            </section>
 
+            <div class="projects"><section class="project" ng-repeat="project in projectList">
+                <img class="circular projectImg" src={{project.picture}}>
+                <h2>{{project.name}}</h2>
+                <p>{{project.desc}}</p>
 
-
+            </section></div>
             <a href="#about">
                 <img id="leftarrow" src="../../img/arrows/arrow-left3.svg">
             </a>
