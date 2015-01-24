@@ -14,6 +14,8 @@ angular.module('myPortfolio.projectView', ['ngRoute'])
             });
 }])
     .controller('ProjectController', function ($scope, $location) {
+        //name, desc, link, technology
+        $scope.projectList = projectList;
         $scope.left = '/about';
         $scope.right = '/';
         $scope.slide = function (direction) {
@@ -33,9 +35,8 @@ angular.module('myPortfolio.projectView', ['ngRoute'])
             }
         }
         $scope.$on('$viewContentLoaded', function () {
-            console.log('did it work?');
             setTimeout(function () {
                 $("#projectMain").focus();
-            }, 10);
+            }, 5);
         });
     });
