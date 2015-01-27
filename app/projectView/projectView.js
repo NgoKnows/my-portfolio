@@ -16,14 +16,16 @@ angular.module('myPortfolio.projectView', ['ngRoute'])
     .controller('ProjectController', function ($scope, $location) {
         //name, desc, link, technology
         $scope.projectList = projectList;
+        $scope.techImages = ["../../img/logos/android.svg", "../../img/logos/java.svg", "../../img/logos/python.svg", "../../img/logos/html.svg", "../../img/logos/javascript.svg", "../../img/logos/css.svg", "../../img/logos/angular.svg"]
         $scope.left = '/about';
         $scope.right = '/';
+        $scope.getTech = function (index) {
+            return $scope.techImages[index - 1];
+        }
         $scope.slide = function (direction) {
             if (direction === 'left' && $scope.left) {
-                console.log(direction);
                 $location.path($scope.left)
             } else if (direction === 'right' && $scope.right) {
-                console.log(direction);
                 $location.path($scope.right);
             }
         }
@@ -34,9 +36,23 @@ angular.module('myPortfolio.projectView', ['ngRoute'])
                 $scope.slide('right');
             }
         }
+        $scope.showOverlay = function (index, show) {
+            var img = "#img" + index;
+            var button = "#button" + index;
+            if (show) {
+                console.log('1');
+                $(button).addClass("shown");
+                $(img).addClass("hover");
+            } else {
+                console.log('2');
+                $(button).removeClass("shown");
+                $(img).removeClass("hover");
+            }
+        }
         $scope.$on('$viewContentLoaded', function () {
             setTimeout(function () {
                 $("#projectMain").focus();
+                $(this).scrollTop(0);
             }, 5);
         });
     });
