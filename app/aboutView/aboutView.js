@@ -12,7 +12,6 @@ angular.module('myPortfolio.aboutView', ['ngRoute'])
         $scope.right = '/projects';
         $scope.slide = function (direction) {
             if (direction === 'left' && $scope.left) {
-                console.log(direction);
                 $location.path($scope.left)
             } else if (direction === 'right' && $scope.right) {
                 console.log(direction);
@@ -26,9 +25,12 @@ angular.module('myPortfolio.aboutView', ['ngRoute'])
                 $scope.slide('right');
             }
         }
-                $scope.$on('$viewContentLoaded', function () {
+        $scope.$on('$viewContentLoaded', function () {
             setTimeout(function () {
-                $("#focusAbout").focus();
-            }, 1);
+                $("#aboutMain").focus();
+            }, 5);
+            setTimeout(function () {
+                $(this).scrollTop(0);
+            }, 5);
         });
     });
