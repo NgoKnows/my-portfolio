@@ -1,13 +1,16 @@
 .aboutpart{
     text-align: center;
-    padding: 1em;
+    padding: 3em;
     min-height: 3vh;
 }
 .glyphicon{
     font-size: 5em;
 }
 .about{
-    margin: 65px;
+    margin: 100px;
+}
+h1{
+    padding-bottom: 1.25em;
 }
 
 
