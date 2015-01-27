@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>About</title>
+    <link rel="stylesheet" href="../../css/animate.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../css/main.css">
     <link rel="stylesheet" href="../../css/about.css">
@@ -13,23 +14,23 @@
 </head>
 
 <body>
-    <main id="focusAbout" tabindex="0" ng-keydown="keyPress($event)">
+    <main id="aboutMain" tabindex="0" ng-keydown="keyPress($event)">
         <header>
         </header>
         <section>
 
-            <img ng-click="slide('right')" id="rightarrow" src="../../img/arrows/arrow-right3.svg">
+            <img class="animated pulse" ng-click="slide('right')" id="rightarrow" src="../../img/arrows/arrow-right3.svg">
 
-            <img id="leftarrow" src="../../img/arrows/arrow-left3.svg">
+            <img class="animated pulse" ng-click="slide('left')" id="leftarrow" src="../../img/arrows/arrow-left3.svg">
 
             <div id="navbar">
                 <span class="navbutton"><a href="#home"> Home</a></span>
-                <span class="navbutton cur"><a href="#about">About Me</a></span>
+                <span class="navbutton cur"><a href="#about">About</a></span>
                 <span class="navbutton"><a href="#project">Projects</a></span>
                 <span class="navbutton"><a href="../../img/FINAL%20RESUME.pdf">Resume</a></span>
             </div>
 <div class="about">
-            <h1>about me</h1>
+            <h1>Hi, I'm Alex Ngo</h1>
             <div class="row">
                 <div class="aboutpart col-md-6">
                     <span class="glyphicon glyphicon-book"></span>
