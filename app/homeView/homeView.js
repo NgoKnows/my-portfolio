@@ -30,6 +30,7 @@ angular.module('myPortfolio.homeView', ['ngRoute'])
         $scope.$on('$viewContentLoaded', function () {
             console.log('hi');
             setTimeout(function () {
+                //$("#rightarrow").addClass('animated pulse');
                 $("#homeMain").focus();
             }, 1);
             setTimeout(function () {
