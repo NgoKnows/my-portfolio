@@ -1,20 +1,140 @@
-.project{
-    margin: 65px;
+.project {
+    margin: 1em;
+    width: 100%;
 }
-p{
+.projects {
+    margin-left: 5em;
+    margin-right: 5em;
+    text-align: center;
+}
+#projecthead {
+    padding-left: 1em;
+    padding-bottom: 0.5em;
+    text-align: left;
+}
+p {
     text-align: center
 }
-img.projectImg{
+img.projectImg {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    max-width: 20em;
+    position: relative;
+    max-width: 12em;
+    max-height: 12em;
+}
+.overlay {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 15em;
+    max-width: 15em;
+    background-color: grey;
+}
+.hover {
+    opacity: 0.6;
+}
+.button {
+    position: relative;
+    top: -6em;
+    text-align: center;
+    opacity: 1;
+    display: none;
+}
+.shown {
+    display: inline-block;
 }
 .circular {
-	width: 300px;
-	height: 300px;
-	border-radius: 150px;
-	-webkit-border-radius: 150px;
-	-moz-border-radius: 150px;
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border-radius: 250px;
+    -webkit-border-radius: 250px;
+    -moz-border-radius: 250px;
     border: grey;
+}
+.tech {
+    max-height: 2em;
+}
+.techcontainer {
+    text-align: center;
+    position: relative;
+}
+.tech:hover {
+    opacity: 0.5;
+}
+.ng-enter,
+.ng-move {
+    -webkit-animation: bounceIn 10s;
+    -moz-animation: bounceIn 10s;
+    -o-animation: bounceIn 10s;
+    animation: bounceIn 10s;
+}
+.ng-leave {
+    -webkit-animation: fadeOut 0.2s;
+    -moz-animation: fadeOut 0.2s;
+    -o-animation: fadeOut 0.2s;
+    animation: fadeOut 0.2s;
+}
+@media screen and (min-width: 320px) {
+    .tech {
+        max-height: 2.75em;
+    }
+    img.projectImg,
+    .overlay {
+        max-width: 13em;
+        max-height: 13em;
+    }
+}
+@media screen and (min-width: 540px) {
+    .tech {
+        max-height: 3.5em;
+    }
+    img.projectImg,
+    .overlay {
+        max-width: 16em;
+        max-height: 16em;
+    }
+}
+@media screen and (min-width: 768px) {
+    img.projectImg,
+    .overlay {
+        max-width: 20em;
+        max-height: 20em;
+    }
+}
+}
+@media screen and (min-width: 1024px) {
+    img.projectImg,
+    .overlay {
+        max-width: 25em;
+        max-height: 25em;
+    }
+}
+@media screen and (min-width: 1224px) {
+    a p{
+        font-size: 2em;
+    }
+    .tech {
+        max-height: 4em;
+    }
+    img.projectImg,
+    .overlay {
+        max-width: 30em;
+        max-height: 30em;
+    }
+}
+@media screen and (min-width: 1824px) {
+    .tech {
+        max-height: 5em;
+    }
+    .project {
+        width: 30%;
+        padding-top: 5em;
+    }
+    img.projectImg,
+    .overlay {
+        max-width: 35em;
+        max-height: 35em;
+    }
 }
