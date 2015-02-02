@@ -5,7 +5,7 @@ angular.module('myPortfolio', [
     'ngAnimate',
     'myPortfolio.homeView',
     'myPortfolio.aboutView',
-    'myPortfolio.projectView'
+    'myPortfolio.projectView',
 ])
     .config(['$routeProvider',
         function ($routeProvider) {
@@ -13,15 +13,3 @@ angular.module('myPortfolio', [
                 redirectTo: '/homeView'
             });
 }]);
-
-//    .config(function ($routeProvider) {
-//        $routeProvider
-//            .when('/', {
-//                templateUrl: 'app/homeView/homeView.html',
-//                controller: 'HomeController'
-//            })
-//            .when('/about', {
-//                templateUrl: 'app/aboutView/aboutView.html',
-//                controller: 'PortfolioController'
-//            })
-//    })
