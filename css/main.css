@@ -86,20 +86,20 @@ a:link {
 }
 main.ng-enter,
 main.ng-move {
-    -webkit-animation: rollIn 1s;
-    -moz-animation: rollIn 1s;
-    -o-animation: rollIn 1s;
-    animation: rollIn 1s;
+    -webkit-animation: fadeIn 1s;
+    -moz-animation: fadeIn 1s;
+    -o-animation: fadeIn 1s;
+    animation: fadeIn 1s;
 }
 main.ng-leave {
-    -webkit-animation: fadeOut 0.2s;
-    -moz-animation: fadeOut 0.2s;
-    -o-animation: fadeOut 0.2s;
-    animation: fadeOut 0.2s;
+    -webkit-animation: fadeOutDown 0.75s;
+    -moz-animation: fadeOutDown 0.75s;
+    -o-animation: fadeOutDown 0.75s;
+    animation: fadeOutDown 0.75s;
 }
 @media screen and (min-width: 320px) {
     #navbar {
-        font-size: 1.3em;
+        font-size: 1.05em;
     }
     h2 {
         font-size: 1.5em;
@@ -155,7 +155,7 @@ main.ng-leave {
         font-size: 2.5em;
     }
     h2 {
-        font-size: 3em;
+        font-size: 2.25em;
     }
     p {
         font-size: 2em;
@@ -166,7 +166,7 @@ main.ng-leave {
         font-size: 2;
     }
     h2 {
-        font-size: 4em;
+        font-size: 2.5em;
     }
     p {
         font-size: 3em;
