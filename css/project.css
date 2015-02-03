@@ -7,6 +7,9 @@
     margin-right: 5em;
     text-align: center;
 }
+main{
+    min-height: 100vh;
+}
 #projecthead {
     padding-left: 1em;
     margin-top: 0;
@@ -153,8 +156,8 @@ img.projectImg {
         max-height: 30em;
     }
     .button {
-        min-height: 4em;
-        min-width: 25em;
+        min-height: 3.75em;
+        min-width: 23em;
         top: -10em;
     }
 }
