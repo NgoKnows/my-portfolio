@@ -1,36 +1,51 @@
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 @import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css");
- html,
+html,
 body {
     height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
 }
+
 main:focus {
     outline: none;
 }
+
 a:visited {
     color: black;
+}
+
+main {
+    background-color: #F2F1EF;
+}
+
+body {
+    background-color: #F2F1EF;
 }
 /*navigation*/
 
 #navbar {
     /*    background-color: black;*/
+
     min-height: 2.75em;
     opacity: .5;
     text-align: right;
+    font-size: 1em;
 }
+
 .navbutton {
     font-family: 'Open Sans';
     color: Black;
-    padding: 0.5em;
+    padding: 0.4em;
     position: relative;
     font-weight: 700;
 }
+
 .cur {
     text-decoration: underline;
 }
+
 h1 {
     color: grey;
     text-align: center;
@@ -38,6 +53,7 @@ h1 {
     font-family: 'Montserrat';
     font-weight: 400
 }
+
 h2 {
     color: grey;
     text-align: center;
@@ -45,8 +61,10 @@ h2 {
     font-family: 'Montserrat';
     font-weight: 400
 }
+
 p {
     /*    color: #C1CDCD;*/
+
     font-family: 'Montserrat';
     text-align: center;
 }
@@ -59,6 +77,7 @@ p {
     width: 100%;
     height: 100%;
 }
+
 .slide.ng-enter,
 .slide.ng-leave {
     -webkit-transition: all .75s ease;
@@ -66,10 +85,12 @@ p {
     -o-transition: all .75s ease;
     transition: all .75s ease;
 }
+
 a:link {
     color: black;
     text-decoration: none;
 }
+
 #rightarrow,
 #leftarrow {
     opacity: 0.7;
@@ -78,12 +99,15 @@ a:link {
     max-width: 2.5em;
     max-height: 2.5em;
 }
+
 #rightarrow {
     right: 1em;
 }
+
 #leftarrow {
     left: 1em;
 }
+
 main.ng-enter,
 main.ng-move {
     -webkit-animation: fadeIn 1s;
@@ -91,15 +115,17 @@ main.ng-move {
     -o-animation: fadeIn 1s;
     animation: fadeIn 1s;
 }
+
 main.ng-leave {
     -webkit-animation: fadeOutDown 0.75s;
     -moz-animation: fadeOutDown 0.75s;
     -o-animation: fadeOutDown 0.75s;
     animation: fadeOutDown 0.75s;
 }
+
 @media screen and (min-width: 320px) {
     #navbar {
-        font-size: 1.05em;
+        font-size: .9em;
     }
     h2 {
         font-size: 1.5em;
@@ -127,9 +153,10 @@ main.ng-leave {
         animation-iteration-count: 3;
     }
 }
+
 @media screen and (min-width: 540px) {
     #navbar {
-        font-size: 1.79em;
+        font-size: 1.62em;
     }
     h2 {
         font-size: 2em;
@@ -150,9 +177,10 @@ main.ng-leave {
         max-height: 4em;
     }
 }
+
 @media screen and (min-width: 768px) {
     #navbar {
-        font-size: 2.5em;
+        font-size: 2.32em;
     }
     h2 {
         font-size: 2.25em;
@@ -161,6 +189,7 @@ main.ng-leave {
         font-size: 2em;
     }
 }
+
 @media screen and (min-width: 992px) {
     #navbar {
         font-size: 2;
