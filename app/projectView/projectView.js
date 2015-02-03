@@ -13,6 +13,7 @@ angular.module('myPortfolio.projectView', ['ngRoute'])
         $scope.techImages = ["../../img/logos/android.svg", "../../img/logos/java.svg", "../../img/logos/python.svg", "../../img/logos/html.svg", "../../img/logos/javascript.svg", "../../img/logos/css.svg", "../../img/logos/angular.svg", "../../img/logos/d3.svg"];
         $scope.techLabels =
 ["Android", "Java", "Python", "HTML5", "JavaScript", "CSS3", "AngularJS", "D3.js"];
+        $scope.projectLinks = ["#projectDesc1", "#projectDesc2", "#projectDesc3"];
         $scope.left = '/about';
         $scope.right = '/';
         $scope.getTech = function (index) {
