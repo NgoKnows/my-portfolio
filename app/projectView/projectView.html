@@ -33,7 +33,7 @@
                 <div class="project col-md-3" ng-repeat="project in projectList">
                     <div class="overlay circular">
                         <img class="circular projectImg" src="{{project.picture}}" ng-mouseover="showOverlay($index, true)" ng-mouseleave="showOverlay($index, false)" ng-attr-id="{{'img' + $index}}">
-                        <a href="" class="button button-pill button-small" ng-mouseover="showOverlay($index, true)" ng-mouseleave="showOverlay($index, false)" ng-attr-id="{{ 'button' + $index }}">
+                        <a href="{{ projectLinks[$index] }}" class="button button-pill button-small" ng-mouseover="showOverlay($index, true)" ng-mouseleave="showOverlay($index, false)" ng-attr-id="{{ 'button' + $index }}">
                             <p>Learn More!</p>
                         </a>
                     </div>
@@ -50,7 +50,6 @@
             <a href="#about">
                 <img class="animated tada" id="leftarrow" src="../../img/arrows/arrow-left3.svg">
             </a>
-            <section></section>
         </section>
     </main>
 </body>
