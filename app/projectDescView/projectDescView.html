@@ -11,22 +11,17 @@
     <link rel="stylesheet" href="../../css/buttons.css">
     <link rel="stylesheet" href="../../css/main.css">
     <link rel="stylesheet" href="../../css/project.css">
+    <link rel="stylesheet" href="../../css/projectdesc.css">
         <link rel="stylesheet" href="css/dist/css/flat-ui.min.css">
 
 </head>
 
 <body>
-    <main id="projectMain" tabindex="0" ng-keydown="keyPress($event)">
+    <main id="projectMain" class="container" tabindex="0" ng-keydown="keyPress($event)">
         <header>
         </header>
-        <section>
 
-            <div id="navbar">
-                <span class="navbutton"><a href="#home"> Home</a></span>
-                <span class="navbutton"><a href="#about">About</a></span>
-                <span class="navbutton cur"><a href="#project">Projects</a></span>
-                <span class="navbutton"><a href="../../img/FINAL%20RESUME.pdf">Resume</a></span>
-            </div>
+
             <h1 id="projecthead">Projects</h1>
 
             <div class="projects row">
@@ -47,11 +42,24 @@
 
                 </div>
             </div>
+            <h2>Everything Sports</h2>
+            <img src="../../img/projects/fantasy.png" id="projpic" class="circular";>
+            <h4>Fantasy basketball tools to help the saavy fantasy player!</h4>
+            <span id="exit" class="glyphicon glyphicon-remove"></span>
+
+             <section>
+            <div class="row"><figure class="aboutpart col-md-6 col-sm-6 col-xs-6">
+  <img id="webpic" src="../../img/projects/120px-Emblem-web.svg.png">
+  <div id=webcaption><a href="https://github.com/NgoKnows/Everything-Sports"><h6>Website</h6></a></div>
+</figure>
+            <figure class="aboutpart col-md-6 col-sm-6 col-xs-6">
+  <a href="https://github.com/NgoKnows/Everything-Sports"><img id="gitpic" src="../../img/projects/github.png"></a>
+  <div id="gitcaption"><a href="https://github.com/NgoKnows/Everything-Sports"><h6>GitHub</h6></a></div>
+</figure></div>
+                 </section>
             <a href="#about">
-                <img class="animated tada" id="leftarrow" src="../../img/arrows/arrow-left3.svg">
+                <img class="animated tada" id="rightarrow" src="../../img/arrows/arrow-right3.svg">
             </a>
-            <section></section>
-        </section>
     </main>
 </body>
 
