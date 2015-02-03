@@ -1,31 +1,29 @@
 "use strict"
-angular.module('myPortfolio.projectView', ['ngRoute'])
+angular.module('myPortfolio.projectDescView', ['ngRoute'])
     .config(['$routeProvider',
         function ($routeProvider) {
-            $routeProvider.when('/project', {
-                templateUrl: 'app/projectView/projectView.html',
-                controller: 'ProjectController'
+            $routeProvider.when('/projectDesc1', {
+                templateUrl: 'app/projectDescView/projectDescView.html',
+                controller: 'ProjectDescController'
+            });
+            $routeProvider.when('/projectDesc2', {
+                templateUrl: 'app/projectDescView/projectDescView2.html',
+                controller: 'ProjectDescController'
+            });
+            $routeProvider.when('/projectDesc3', {
+                templateUrl: 'app/projectDescView/projectDescView3.html',
+                controller: 'ProjectDescController'
             });
 }])
-    .controller('ProjectController', function ($scope, $location) {
-        //name, desc, link, technology
-        $scope.projectList = projectList;
-        $scope.techImages = ["../../img/logos/android.svg", "../../img/logos/java.svg", "../../img/logos/python.svg", "../../img/logos/html.svg", "../../img/logos/javascript.svg", "../../img/logos/css.svg", "../../img/logos/angular.svg", "../../img/logos/d3.svg"];
-        $scope.techLabels =
-["Android", "Java", "Python", "HTML5", "JavaScript", "CSS3", "AngularJS", "D3.js"];
-        $scope.left = '/about';
-        $scope.right = '/';
-        $scope.getTech = function (index) {
-            return $scope.techImages[index - 1];
-        }
-        $scope.getLabel = function (index) {
-            return $scope.techLabels[index - 1];
-        }
+    .controller('ProjectDescController', function ($scope, $location) {
+        $scope.left = '/';
+        $scope.right = '/projects';
         $scope.slide = function (direction) {
             if (direction === 'left' && $scope.left) {
                 $location.path($scope.left)
             } else if (direction === 'right' && $scope.right) {
-                //$location.path($scope.right);
+                console.log(direction);
+                $location.path('/project');
             }
         }
         $scope.keyPress = function (event) {
@@ -35,33 +33,11 @@ angular.module('myPortfolio.projectView', ['ngRoute'])
                 $scope.slide('right');
             }
         }
-        $scope.showOverlay = function (index, show) {
-            var img = "#img" + index;
-            var button = "#button" + index;
-            if (show) {
-                console.log('1');
-                $(button).addClass("shown");
-                $(img).addClass("hover");
-            } else {
-                console.log('2');
-                $(button).removeClass("shown");
-                $(img).removeClass("hover");
-            }
-        }
-        $scope.showLabel = function (parentIndex, index, show) {
-            var label = "#label" + parentIndex + index;
-            console.log(label);
-            if (show) {
-                $(label).addClass("shown");
-
-            } else {
-                $(label).removeClass("shown");
-            }
-        }
         $scope.$on('$viewContentLoaded', function () {
-            console.log('linked up');
             setTimeout(function () {
-                $("#projectMain").focus();
+                $("#aboutMain").focus();
+            }, 5);
+            setTimeout(function () {
                 $(this).scrollTop(0);
             }, 5);
         });
