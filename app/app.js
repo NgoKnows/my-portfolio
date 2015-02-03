@@ -6,6 +6,7 @@ angular.module('myPortfolio', [
     'myPortfolio.homeView',
     'myPortfolio.aboutView',
     'myPortfolio.projectView',
+    'myPortfolio.projectDescView'
 ])
     .config(['$routeProvider',
         function ($routeProvider) {
