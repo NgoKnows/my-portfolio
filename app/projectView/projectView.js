@@ -10,10 +10,10 @@ angular.module('myPortfolio.projectView', ['ngRoute'])
     .controller('ProjectController', function ($scope, $location) {
         //name, desc, link, technology
         $scope.projectList = projectList;
-        $scope.techImages = ["../../img/logos/android.svg", "../../img/logos/java.svg", "../../img/logos/python.svg", "../../img/logos/html.svg", "../../img/logos/javascript.svg", "../../img/logos/css.svg", "../../img/logos/angular.svg", "../../img/logos/d3.svg"];
+        $scope.techImages = ["../../img/logos/android.svg", "../../img/logos/java.svg", "../../img/logos/python.svg", "../../img/logos/html.svg", "../../img/logos/javascript.svg", "../../img/logos/css.svg", "../../img/logos/angular.svg", "../../img/logos/d3.svg", "../../img/logos/google-maps.svg"];
         $scope.techLabels =
-["Android", "Java", "Python", "HTML5", "JavaScript", "CSS3", "AngularJS", "D3.js"];
-        $scope.projectLinks = ["#projectDesc1", "#projectDesc2", "#projectDesc3"];
+["Android", "Java", "Python", "HTML5", "JavaScript", "CSS3", "AngularJS", "D3.js", "Google Maps"];
+        $scope.projectLinks = ["#projectDesc1", "#projectDesc2", "#projectDesc3", "#projectDesc4"];
         $scope.left = '/about';
         $scope.right = '/';
         $scope.getTech = function (index) {
