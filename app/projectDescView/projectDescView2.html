@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/animate.css">
+    <link rel="stylesheet" href="../../css/buttons.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/project.css">
+    <link rel="stylesheet" href="../../css/projectdesc.css">
+    <link rel="stylesheet" href="css/dist/css/flat-ui.min.css">
+    <link rel="stylesheet" href="../../css/projectdesc1.css">
+
+
+</head>
+
+<body>
+    <main id="projDescMain" class="container" tabindex="0" ng-keydown="keyPress($event, '/projectDesc1', '/projectDesc3')">
+        <header>
+        </header>
+
+
+        <h1 id="projecthead">Projects</h1>
+
+        <h2>Zillow HackHousing Hackathon | HoodScout</h2>
+        <img src="../../img/projects/2015-02-10%2020_43_54-Heatmaps.png" id="projpic" class="circular" ;>
+        <h4>Helping people find the perfect neighboorhood</h4>
+        <a href="#project"><span id="exit" class=" animated pulse infinite glyphicon glyphicon-remove"></span></a>
+
+        <section>
+            <div class="row">
+                <figure class="col-md-12 col-sm-12 col-xs-12">
+                    <a href="https://github.com/ZillowHackathonTeamHeat/HeatMap"><img id="gitpic" src="../../img/projects/github.png">
+                    </a>
+                    <div id="gitcaption"><a href="https://github.com/NgoKnows/NBA-Analysis"><h6>GitHub</h6></a>
+                    </div>
+                </figure>
+            </div>
+        </section>
+        <section class="writing">
+            	<p>I recently participated in Zillow’s HackHousing Hackathon, which was a Hackathon whose goal was to develop products to help different groups find housing. It focused on helping people in need who have a hard time finding homes, from 1st time homebuyers to the elderly, and even homeless who need help finding housing. It was all about helping those in need, and leveraging newly opened up data provided by Socrata, the City of Seattle, and HUD in innovative ways to help these people. There was a wealth of data, it was our job to use it in innovative ways and present it to these groups and make their lives easier.</p>
+	<p>The team that I got together consisted of 3 other Informatics students as well as a 5th member that we met at the hackathon. It was a new experience for all of us, but it was a really positive experience, and I felt like we all learned a lot from it. Before the hackathon we met up to ideate, and we eventually came to the idea of making a heat map which helps identify which neighborhoods are desirable. We wanted it to be something that was customizable, where you could identify what is important to you, and be able to generate the heat map based on your values.</p>
+            <section class="code"><img src="../../img/projects/2015-02-10%2021_38_43-Heatmaps.png" class="codeimg"></section>
+<p>	I was the leader of the team, so to get started, I gave everyone the tasks of aggregating this data. This was no easy tasks as many of them did not have much experience using API’s to get data, so they were definitely learning on the fly. Being in the role of leader, I not only worked on gathering data as well, but I was their resource when things weren’t working, which happened a lot as some of the members were not as versed in JavaScript. I did most of the styling, including menus, and such.
+</p>	<p>We started with a base google maps page, and a basic heat map example that was already provided. From there I used the Seattle Open Data API to get all the crime data in the past 5 or so years. Then I placed those points in the heat map. From there I had to get started on getting a UI for the application since I had the most experience with it, and as I did that, the group continued to try to get data to use for our application. </p>
+            <section class="code"><img src="../../img/projects/2015-02-10%2021_25_14-Heatmaps.png" class="codeimg"></section>
+	<p>We spent much time learning how to parse different data formats (JSON, XML, GEOJSON), and ran out of time to implement the functionality that we wanted however we did get much of the data. We plan to continue this project and hope to implement more functionality very soon. The next step is to come up with an algorithm to create the heat map depending on values of the user.</p>
+
+        </section>
+        </section>
+        <a href="#projectDesc1">
+            <img class="animated tada" id="leftarrow" src="../../img/arrows/arrow-left3.svg">
+        </a>
+        <a href="#projectDesc3">
+            <img class="animated tada" id="rightarrow" src="../../img/arrows/arrow-right3.svg">
+        </a>
+    </main>
+</body>
+
+</html>

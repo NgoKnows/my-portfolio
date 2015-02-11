@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/animate.css">
+    <link rel="stylesheet" href="../../css/buttons.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/project.css">
+    <link rel="stylesheet" href="../../css/projectdesc.css">
+    <link rel="stylesheet" href="css/dist/css/flat-ui.min.css">
+    <link rel="stylesheet" href="../../css/projectdesc1.css">
+
+
+</head>
+
+<body>
+    <main id="projDescMain" class="container" tabindex="0" ng-keydown="keyPress($event, '/projectDesc3', '')">
+        <header>
+        </header>
+
+
+        <h1 id="projecthead">Projects</h1>
+
+        <h2>My Portfolio</h2>
+        <img src="../../img/projects/portfolio.png" id="projpic" class="circular" ;>
+        <h4>An in-depth look at Alex Ngo!</h4>
+        <a href="#project"><span id="exit" class=" animated pulse infinite glyphicon glyphicon-remove"></span></a>
+
+        <section>
+            <div class="row">
+                <figure class="col-md-12 col-sm-12 col-xs-12">
+                    <a href="https://github.com/NgoKnows/my-portfolio"><img id="gitpic" src="../../img/projects/github.png">
+                    </a>
+                    <div id="gitcaption"><a href="https://github.com/NgoKnows/my-portfolio"><h6>GitHub</h6></a>
+                    </div>
+                </figure>
+            </div>
+        </section>
+        <section class="writing">
+            <p>This portfolio started when I realized I want a way for people to see what I’ve done, and be able to learn more about how I did it. So set out to make my own website, and hopefully learn some new things along the way.
+First I sketched out how I wanted to look, and from there I began to create the structure of this project. I wanted this to use switch views to navigate around pages. So I created the index.html which is the base page and switching between pages just changes the route which changes the view. This is something I’ve been wanting to learn in order to create single page applications, and so I began to learn how to use Angular’s ngView to switch views.</p>
+<p>Once I learned how to switch from view to view, I then created the home page the first iteration of the one that is currently up. I wanted there to be a greeting immediately so they see that it is my webpage, and for the home page to be the jumping off point, so I left it simple with a background and a greeting.</p>
+<p>A lot of decisions were made purposefully in order to improve UX, such as the menu; the reason the menu is as such and not a dropdown button (hamburger button), is because I wanted everything immediately visible to visitors, so they could easily navigate to projects without any confusion. The arrows pulse so you know they are there and can use them to navigate, and also give the impression that you can arrow over to navigate, so I implemented that even though I knew not many users would use that feature. The technologies for each project, have a tooltip so if the symbol isn’t recognized, they can see what it is.
+</p><p>The main thing I wanted to do, was to give a more in-depth view of my myself and my projects for anyone who is interested.</p>
+
+
+        </section>
+        </section>
+
+        <a href="#projectDesc2">
+            <img class="animated tada" id="leftarrow" src="../../img/arrows/arrow-left3.svg">
+        </a>
+    </main>
+</body>
+
+</html>
