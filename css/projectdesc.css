@@ -1,8 +1,8 @@
 main {
     min-height: 100vh;
-    background-color: #E4F1FE;
-    margin-right: 10%;
-    margin-left: 10%;
+    background-color: #ECECEC;
+    margin-right: 7%;
+    margin-left: 7%;
     max-width: 100%;
 }
 
@@ -14,42 +14,173 @@ main {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    max-height: 20em;
-    max-width: 20em;
+    max-height: 5em;
+    max-width: 5em;
+}
+
+#projDescMain {
+    padding: 0;
 }
 
 #exit {
-    font-size: 4em;
-    position: fixed;
-    top: 0.2em;
-    right: 1vw
+    font-size: 7.5vw;
+    position: absolute;
+    top: 0.1em;
+    right: 0.5vw;
 }
 
 #gitpic {
+    /*
     display: block;
     margin-right: auto;
+*/
+
     max-height: 5em;
 }
 
 #webpic {
+    /*
     display: block;
     margin-left: auto;
-    max-height: 5em;
-}
-#webpic:hover, #gitpic:hover{
-    opacity: 0.8;
-}
-#gitcaption{
-    text-align: left;
-    max-width: 50%;
-    text-decoration: underline
-}
-#webcaption{
-    position: relative;
-    text-align: right;
-    text-decoration: underline;
+*/
 
+    max-height: 5em;
+    position: relative;
+    left: 12vw;
 }
+
+main h2 {
+    font-size: 2.5em;
+}
+
+.writing {
+    margin: 1em;
+}
+
+#webpic:hover,
+#gitpic:hover {
+    opacity: 0.7;
+}
+
+#gitcaption {
+    text-decoration: underline;
+    max-width: 5.2em;
+}
+
+#webcaption {
+    position: relative;
+    left: 12vw;
+    text-decoration: underline;
+    max-width: 5.2em;
+}
+
+section p {
+    text-align: left;
+    font-size: 0.675em;
+}
+
 h4 {
     text-align: center;
 }
+
+.code {
+    padding: none;
+    width: 100%;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.codeimg {
+    max-width: 65vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+    #projectvideo{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 75vw;
+    }
+
+@media screen and (min-width: 320px) {
+    #projpic {
+        max-height: 14em;
+        max-width: 14em;
+    }
+    .codeimg {
+        max-width: 70vw;
+    }
+    section p {
+        font-size: .65em;
+    }
+}
+
+@media screen and (min-width: 540px) {
+    #exit {
+        font-size: 9vw;
+    }
+    #projpic {
+        max-height: 16em;
+        max-width: 16em;
+    }
+    #exit {
+        font-size: 3em;
+    }
+    section p {
+        font-size: .9em;
+    }
+    .writing {
+        margin: 2em;
+    }
+    main h2 {
+        font-size: 3em;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #projpic {
+        max-height: 20em;
+        max-width: 20em;
+    }
+    #exit {
+        font-size: 3.2em;
+    }
+    section p {
+        font-size: 1em;
+    }
+    #webpic,
+    #webcaption {
+        left: 24vw;
+    }
+    @media screen and (min-width: 1024px) {
+        #projpic {
+            max-height: 25em;
+            max-width: 25em;
+        }
+        .codeimg {
+            max-width: 56vw;
+        }
+    }
+    @media screen and (min-width: 1224px) {
+        #projpic {
+            max-height: 30em;
+            max-width: 30em;
+        }
+        h4 {
+            font-size: 10em;
+        }
+        main {
+            margin-right: 15%;
+            margin-left: 15%;
+        }
+        section p {
+            text-align: left;
+            font-size: 1.1em;
+        }
+    }
+    @media screen and (min-width: 1824px) {
+        main {
+            margin-right: 20%;
+            margin-left: 20%;
+        }
