@@ -14,6 +14,10 @@ angular.module('myPortfolio.projectDescView', ['ngRoute'])
                 templateUrl: 'app/projectDescView/projectDescView3.html',
                 controller: 'ProjectDescController'
             });
+            $routeProvider.when('/projectDesc4', {
+                templateUrl: 'app/projectDescView/projectDescView4.html',
+                controller: 'ProjectDescController'
+            });
 }])
     .controller('ProjectDescController', function ($scope, $location) {
         $scope.left = '/';
@@ -22,21 +26,21 @@ angular.module('myPortfolio.projectDescView', ['ngRoute'])
             if (direction === 'left' && $scope.left) {
                 $location.path($scope.left)
             } else if (direction === 'right' && $scope.right) {
-                console.log(direction);
                 $location.path('/project');
             }
         }
-        $scope.keyPress = function (event) {
-            if (event.keyCode == 37) {
-                $scope.slide('left');
-            } else if (event.keyCode == 39) {
-                $scope.slide('right');
+        $scope.keyPress = function (event, left, right) {
+            if (event.keyCode === 37 && left !== '') {
+                $location.path(left);
+            } else if (event.keyCode === 39 && right !== '') {
+                $location.path(right);
             }
         }
+
         $scope.$on('$viewContentLoaded', function () {
             setTimeout(function () {
-                $("#aboutMain").focus();
-            }, 5);
+                $("projDescMain").focus();
+            }, 20);
             setTimeout(function () {
                 $(this).scrollTop(0);
             }, 5);
