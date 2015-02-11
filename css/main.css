@@ -96,16 +96,16 @@ a:link {
     opacity: 0.7;
     position: fixed;
     bottom: 50vh;
-    max-width: 2.5em;
-    max-height: 2.5em;
+    max-width: 2em;
+    max-height: 2em;
 }
 
 #rightarrow {
-    right: 1em;
+    right: 0em;
 }
 
 #leftarrow {
-    left: 1em;
+    left: 0em;
 }
 
 main.ng-enter,
@@ -137,16 +137,16 @@ main.ng-leave {
         font-size: 1.25em;
     }
     #leftarrow {
-        max-width: 3em;
-        max-height: 3em;
+        max-width: 2.5em;
+        max-height: 2.5em;
         -webkit-animation-iteration-count: 3;
         -moz-animation-iteration-count: 3;
         -o-animation-iteration-count: 3;
         animation-iteration-count: 3;
     }
     #rightarrow {
-        max-width: 3em;
-        max-height: 3em;
+        max-width: 2.5em;
+        max-height: 2.5em;
         -webkit-animation-iteration-count: 3;
         -moz-animation-iteration-count: 3;
         -o-animation-iteration-count: 3;
@@ -168,13 +168,15 @@ main.ng-leave {
     p {
         font-size: 1.75em;
     }
-    #leftarrow {
-        max-width: 4em;
-        max-height: 4em;
+    #leftarrow, #rightarrow {
+        max-width: 3.5em;
+        max-height: 3.5em;
     }
     #rightarrow {
-        max-width: 4em;
-        max-height: 4em;
+        right: 1em;
+    }
+    #leftarrow {
+        left: 1em;
     }
 }
 
@@ -199,5 +201,9 @@ main.ng-leave {
     }
     p {
         font-size: 3em;
+    }
+        #leftarrow, #rightarrow {
+        max-width: 4em;
+        max-height: 4em;
     }
 }
