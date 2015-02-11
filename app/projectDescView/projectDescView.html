@@ -12,54 +12,69 @@
     <link rel="stylesheet" href="../../css/main.css">
     <link rel="stylesheet" href="../../css/project.css">
     <link rel="stylesheet" href="../../css/projectdesc.css">
-        <link rel="stylesheet" href="css/dist/css/flat-ui.min.css">
+    <link rel="stylesheet" href="css/dist/css/flat-ui.min.css">
 
 </head>
 
 <body>
-    <main id="projectMain" class="container" tabindex="0" ng-keydown="keyPress($event)">
+    <main id="projDescMain" class="container" tabindex="0" ng-keydown="keyPress($event, '', '/projectDesc2')">
         <header>
         </header>
 
 
-            <h1 id="projecthead">Projects</h1>
+        <h1 id="projecthead">Projects</h1>
 
-            <div class="projects row">
-                <div class="project col-md-3" ng-repeat="project in projectList">
-                    <div class="overlay circular">
-                        <img class="circular projectImg" src="{{project.picture}}" ng-mouseover="showOverlay($index, true)" ng-mouseleave="showOverlay($index, false)" ng-attr-id="{{'img' + $index}}">
-                        <a href="" class="button button-pill button-small" ng-mouseover="showOverlay($index, true)" ng-mouseleave="showOverlay($index, false)" ng-attr-id="{{ 'button' + $index }}">
-                            <p>Learn More!</p>
-                        </a>
+        <h2>Everything Sports</h2>
+        <img src="../../img/projects/fantasy.png" id="projpic" class="circular" ;>
+        <h4>Fantasy basketball tools to help the saavy fantasy player!</h4>
+        <a href="#project"><span id="exit" class=" animated pulse infinite glyphicon glyphicon-remove"></span></a>
+
+        <section>
+            <div class="row">
+                <figure class="aboutpart col-md-6 col-sm-6 col-xs-6">
+                    <a href="http://students.washington.edu/alexhngo/info343/Everything-Sports/"><img id="webpic" src="../../img/projects/120px-Emblem-web.svg.png">
+                    </a>
+                    <div id=webcaption><a href="http://students.washington.edu/alexhngo/info343/Everything-Sports/"><h6>Website</h6></a>
                     </div>
-
-                    <h2>{{project.name}}</h2>
-                    <h4>{{project.desc}}</h4>
-                    <h6 class="built">Built With:</h6>
-                    <div class="techcontainer">
-                        <span ng-repeat="tech in project.technology"><img class="tech" ng-src="{{getTech(tech)}}" ng-mouseover="showLabel($parent.$index, $index, true)" ng-mouseleave="showLabel($parent.$index, $index, false)"><div class="label" ng-attr-id="{{ 'label' + $parent.$index + $index }}"></div></span>
+                </figure>
+                <figure class="aboutpart col-md-6 col-sm-6 col-xs-6">
+                    <a href="https://github.com/NgoKnows/Everything-Sports"><img id="gitpic" src="../../img/projects/github.png">
+                    </a>
+                    <div id="gitcaption"><a href="https://github.com/NgoKnows/Everything-Sports"><h6>GitHub</h6></a>
                     </div>
-
-                </div>
+                </figure>
             </div>
-            <h2>Everything Sports</h2>
-            <img src="../../img/projects/fantasy.png" id="projpic" class="circular";>
-            <h4>Fantasy basketball tools to help the saavy fantasy player!</h4>
-            <span id="exit" class="glyphicon glyphicon-remove"></span>
+        </section>
+        <section>
+            <iframe id="projectvideo" width="560" height="315" src="https://www.youtube.com/embed/0BSumrB_Vz8" frameborder="0" allowfullscreen></iframe>
+</iframe>
+        </section>
+        <section class="writing">
+            <p>This was a web application I made for my final project in my Web Development class. There were no strict criteria, just to apply the things we learned in class, and use them in our project. So I thought to myself, what is something I think would be useful for not only myself, but others as well, and I thought of my fantasy basketball team. The website I play on doesn’t have the best features, and doesn’t even allow you to sort your team based on statistics, so right there I saw a need for something to help users more easily be able to look at their team.</p>
+            <p>So I first thing I needed to do was to figure out what I was going to need to accomplish this. I came to the conclusion that I would need a way to obtain player statistics because this tool is meant for users to be able to sort their team by points or assists for example. So the solution I came to was to scrape information from basketball-reference.com, and I did this by leverage my knowledge of Python since that seemed like the optimal way to obtain information from a web page.
+            </p>
+            <p>So how I did this specifically was by utilizing the Beautiful Soup library, which provides methods to help parse a web page’s html. I had to first analyze the html of the page that I was scraping and understand the structure of the page. Once I understood the structure, then I used Beautiful Soup to search for certain tags and be able to extract the specific information I am looking for. Some problems I ran into were some special cases such as a field being blank which I had to replace with “0”, also I had to change the encoding of the text to ASCII for it to store correctly. </p>
+            <p> Once the page was parsed, I put each individual player’s statistics in a dictionary with keys being the statistic name (i.e. “FG% or Pts”), and I placed that within a dictionary under the key “stats”, and placed another key/value pair, representing their name. The new dictionary is then placed within a list which is then outputted as a JSON file.
+            </p>
+            <section class="code"><img src="../../img/projects/2015-02-03%2012_45_55-getPlayers%20-%20%5BC__Users_Alex_PycharmProjects_getPlayers%5D%20-%20..._getPlayers.py%20-%20Py.png" class="codeimg">
+            </section>
+            <p>Then I used JavaScript to parse any text a user submits and split that text by whitespace using a RegEx. I then checked each combination of two words (a name) to see if that name was a value in my playerDictionary, and if it was, then that is a player.
+            </p>
+            <section class="code"><img src="../../img/projects/2015-02-03%2021_57_26-%E2%80%A2%20Fantasy_player.js%20(Everything-Sports)%20-%20Brackets.png" class="codeimg">
+            </section>
+            <p>The front-end is built on Angular, and some things I used it for are to display the table which contains the players using ng-repeat, ng-hover to highlight columns, sortBy for a custom sorting function. Also used to populate various dropdowns, especially the dropdowns containing all possible players. Ng-hide, ng-class, ng-clicks used throughout as well to provide functionality throughout the site.</p>
+            <section class="code"><img src="../../img/projects/2015-02-03%2022_02_48-%E2%80%A2%20Fantasy_index.html%20(Everything-Sports)%20-%20Brackets.png" class="codeimg">
+            </section>
+            <section class="code"><img src="../../img/projects/2015-02-03%2022_05_35-Fantasy_app.js%20(Everything-Sports)%20-%20Brackets.png" class="codeimg">
+            </section>
+            <p>The player comparison feature came last, and was created using D3.js. I wanted to be able to visually compare players, and so I thought that using D3 would be a good way to do this. I implemented the ability to compare as many players as wanted, as well as choice of category and grouping preference.</p>
+            <section class="code"><img src="../../img/projects/2015-02-02%2020_49_59-Fantasy%20Sports%20-%20Copy.png" class="codeimg">
+            </section>
+        </section>
 
-             <section>
-            <div class="row"><figure class="aboutpart col-md-6 col-sm-6 col-xs-6">
-  <img id="webpic" src="../../img/projects/120px-Emblem-web.svg.png">
-  <div id=webcaption><a href="https://github.com/NgoKnows/Everything-Sports"><h6>Website</h6></a></div>
-</figure>
-            <figure class="aboutpart col-md-6 col-sm-6 col-xs-6">
-  <a href="https://github.com/NgoKnows/Everything-Sports"><img id="gitpic" src="../../img/projects/github.png"></a>
-  <div id="gitcaption"><a href="https://github.com/NgoKnows/Everything-Sports"><h6>GitHub</h6></a></div>
-</figure></div>
-                 </section>
-            <a href="#about">
-                <img class="animated tada" id="rightarrow" src="../../img/arrows/arrow-right3.svg">
-            </a>
+        <a href="#projectDesc2">
+            <img class="animated tada" id="rightarrow" src="../../img/arrows/arrow-right3.svg">
+        </a>
     </main>
 </body>
 
