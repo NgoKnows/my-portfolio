@@ -10,8 +10,9 @@
     <link rel="stylesheet" href="../../css/animate.css">
     <link rel="stylesheet" href="../../css/buttons.css">
     <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="css/dist/css/flat-ui.min.css">
     <link rel="stylesheet" href="../../css/project.css">
-        <link rel="stylesheet" href="css/dist/css/flat-ui.min.css">
+
 
 </head>
 
@@ -25,7 +26,7 @@
                 <span class="navbutton"><a href="#home"> Home</a></span>
                 <span class="navbutton"><a href="#about">About</a></span>
                 <span class="navbutton cur"><a href="#project">Projects</a></span>
-                <span class="navbutton"><a href="../../img/FINAL%20RESUME.pdf">Resume</a></span>
+                <span class="navbutton"><a href="../../img/Alex%20Ngo's%20Resume.pdf">Resume</a></span>
             </div>
             <h1 id="projecthead">Projects</h1>
 
@@ -38,11 +39,11 @@
                         </a>
                     </div>
 
-                    <h2>{{project.name}}</h2>
+                    <a href="{{ projectLinks[$index] }}"><h2 class="projdesclink">{{project.name}}</h2></a>
                     <h4>{{project.desc}}</h4>
                     <h6 class="built">Built With:</h6>
                     <div class="techcontainer">
-                        <span ng-repeat="tech in project.technology"><img class="tech" ng-src="{{getTech(tech)}}" ng-mouseover="showLabel($parent.$index, $index, true)" ng-mouseleave="showLabel($parent.$index, $index, false)"><div class="label" ng-attr-id="{{ 'label' + $parent.$index + $index }}"></div></span>
+                        <span ng-repeat="tech in project.technology"><img popover="{{getLabel(tech)}}" popover-trigger="mouseenter"  class="tech" ng-src="{{getTech(tech)}}" ng-mouseover="showLabel($parent.$index, $index, true)" ng-mouseleave="showLabel($parent.$index, $index, false)"><div class="label" ng-attr-id="{{ 'label' + $parent.$index + $index }}"></div></span>
                     </div>
 
                 </div>
