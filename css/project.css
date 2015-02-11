@@ -3,7 +3,7 @@
     width: 100%;
 }
 .projects {
-    margin-left: 5em;
+    margin-left: 3em;
     margin-right: 5em;
     text-align: center;
 }
@@ -17,6 +17,12 @@ main{
 }
 p {
     text-align: center
+}
+h2{
+    font-size: 2.55em;
+}
+h4{
+    font-size: 1.25em;
 }
 img.projectImg {
     display: block;
@@ -56,7 +62,7 @@ img.projectImg {
     border: grey;
 }
 .tech {
-    max-height: 1.25em;
+    max-height: 1.2em;
     padding-left: 0.1em;
 }
 .techcontainer {
@@ -91,7 +97,7 @@ img.projectImg {
 }
 @media screen and (min-width: 320px) {
     .tech {
-        max-height: 1.75em;
+        max-height: 1.4em;
     }
     img.projectImg,
     .overlay {
@@ -114,6 +120,12 @@ img.projectImg {
     }
     a p {
         font-size: 1.8em;
+    }
+    h4{
+        font-size: 1.5em;
+    }
+    .projdesclink{
+        text-decoration: underline;
     }
 }
 @media screen and (min-width: 768px) {
@@ -159,6 +171,9 @@ img.projectImg {
         min-height: 3.75em;
         min-width: 23em;
         top: -10em;
+    }
+    h4{
+        font-size: 1.7em;
     }
 }
 @media screen and (min-width: 1824px) {
