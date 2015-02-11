@@ -3,6 +3,7 @@
 angular.module('myPortfolio', [
     'ngRoute',
     'ngAnimate',
+    'ui.bootstrap',
     'myPortfolio.homeView',
     'myPortfolio.aboutView',
     'myPortfolio.projectView',
