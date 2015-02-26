@@ -35,6 +35,12 @@ angular.module('myPortfolio.homeView', ['ngRoute'])
             }, 1);
             setTimeout(function () {
                 $('#hi').fadeIn(1200);
+                console.log("what?");
             }, 800);
+            $('.button-collapse').sideNav({
+                menuWidth: 200, // Default is 240
+                edge: 'left', // Choose the horizontal origin
+                closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+            });
         });
     });

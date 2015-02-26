@@ -8,6 +8,8 @@ body {
     padding: 0;
 }
 
+#navbar {}
+
 main:focus {
     outline: none;
 }
@@ -15,32 +17,24 @@ main:focus {
 a:visited {
     color: black;
 }
-
+.side-nav{
+    opacity: 0.85;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#small-nav{
+  min-height: 100vh;
+ min-width: 5em;
+    background-color: white;
+    opacity: 0.5;
+    position: fixed;
+    -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+}
 main {
-    background-color: #F2F1EF;
+/*    background-color: #F2F1EF;*/
 }
 
 body {
-    background-color: #F2F1EF;
-}
-/*navigation*/
-
-#navbar {
-    /*    background-color: black;*/
-
-    min-height: 2.75em;
-    opacity: .5;
-    text-align: right;
-    font-size: 1em;
-    display: none;
-}
-
-.navbutton {
-    font-family: 'Open Sans';
-    color: Black;
-    padding: 0.4em;
-    position: relative;
-    font-weight: 700;
+/*    background-color: #F2F1EF;*/
 }
 
 .cur {
@@ -51,7 +45,7 @@ h1 {
     color: grey;
     text-align: center;
     font-size: 4em;
-    font-family: 'Montserrat';
+    font-family: 'Roboto';
     font-weight: 400
 }
 
@@ -59,14 +53,11 @@ h2 {
     color: grey;
     text-align: center;
     font-size: 2em;
-    font-family: 'Montserrat';
+    font-family: 'Roboto';
     font-weight: 400
 }
 
 p {
-    /*    color: #C1CDCD;*/
-
-    font-family: 'Montserrat';
     text-align: center;
 }
 /*slide animations*/
@@ -88,8 +79,12 @@ p {
 }
 
 a:link {
-    color: black;
+    color: grey;
     text-decoration: none;
+}
+
+.parallax-container {
+    height: 3000px;
 }
 
 #rightarrow,
@@ -125,9 +120,6 @@ main.ng-leave {
 }
 
 @media screen and (min-width: 320px) {
-    #navbar {
-        font-size: .9em;
-    }
     h2 {
         font-size: 1.5em;
     }
@@ -156,9 +148,6 @@ main.ng-leave {
 }
 
 @media screen and (min-width: 540px) {
-    #navbar {
-        font-size: 1.62em;
-    }
     h2 {
         font-size: 2em;
     }
@@ -169,7 +158,8 @@ main.ng-leave {
     p {
         font-size: 1.75em;
     }
-    #leftarrow, #rightarrow {
+    #leftarrow,
+    #rightarrow {
         max-width: 3.5em;
         max-height: 3.5em;
     }
@@ -182,9 +172,6 @@ main.ng-leave {
 }
 
 @media screen and (min-width: 768px) {
-    #navbar {
-        font-size: 2.32em;
-    }
     h2 {
         font-size: 2.25em;
     }
@@ -194,16 +181,14 @@ main.ng-leave {
 }
 
 @media screen and (min-width: 992px) {
-    #navbar {
-        font-size: 2;
-    }
     h2 {
         font-size: 2.5em;
     }
     p {
         font-size: 3em;
     }
-        #leftarrow, #rightarrow {
+    #leftarrow,
+    #rightarrow {
         max-width: 4em;
         max-height: 4em;
     }
