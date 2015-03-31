@@ -1071,9 +1071,10 @@ $(document).ready(function(){
         var tooltip_delay = origin.data("delay");
         tooltip_delay = (tooltip_delay == undefined || tooltip_delay == "") ? options.delay : tooltip_delay;
         counter = 0;
+        var sidebar = $("#navbar").width();
         counterInterval = setInterval(function(){
           counter += 10;
-          if (counter >= tooltip_delay && started == false) {
+          if (counter >= tooltip_delay && started == false && sidebar < 240) {
             started = true
             newTooltip.css({ display: 'block', left: '0px', top: '0px' });
 

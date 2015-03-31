@@ -9,47 +9,39 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../css/animate.css">
     <link rel="stylesheet" href="../../css/buttons.css">
+    <link rel="stylesheet" href="../../css/materialize/css/materialize.css">
     <link rel="stylesheet" href="../../css/main.css">
     <link rel="stylesheet" href="../../css/project.css">
     <link rel="stylesheet" href="../../css/projectdesc.css">
-    <link rel="stylesheet" href="css/dist/css/flat-ui.min.css">
 
 </head>
 
 <body>
-    <main id="projDescMain" class="container" tabindex="0" ng-keydown="keyPress($event, '', '/projectDesc2')">
+    <main id="projDescMain">
         <header>
         </header>
 
+        <h1 class="shift">Everything Sports</h1>
+        <h2 class="shift">Fantasy basketball tools to help the saavy fantasy player!</h2>
+        <div class="parallax-container projimg">
+            <div class="parallax"><img src="../../img/projects/fantasy.png">
+            </div>
+        </div>
 
-        <h1 id="projecthead">Projects</h1>
-
-        <h2>Everything Sports</h2>
-        <img src="../../img/projects/fantasy.png" id="projpic" class="circular" ;>
-        <h4>Fantasy basketball tools to help the saavy fantasy player!</h4>
         <a href="#project"><span id="exit" class=" animated pulse infinite glyphicon glyphicon-remove"></span></a>
 
         <section>
-            <div class="row">
-                <figure class="aboutpart col-md-6 col-sm-6 col-xs-6">
-                    <a href="http://students.washington.edu/alexhngo/info343/Everything-Sports/"><img id="webpic" src="../../img/projects/120px-Emblem-web.svg.png">
-                    </a>
-                    <div id=webcaption><a href="http://students.washington.edu/alexhngo/info343/Everything-Sports/"><h6>Website</h6></a>
-                    </div>
-                </figure>
-                <figure class="aboutpart col-md-6 col-sm-6 col-xs-6">
-                    <a href="https://github.com/NgoKnows/Everything-Sports"><img id="gitpic" src="../../img/projects/github.png">
-                    </a>
-                    <div id="gitcaption"><a href="https://github.com/NgoKnows/Everything-Sports"><h6>GitHub</h6></a>
-                    </div>
-                </figure>
+            <div class="row center-align">
+                <a href="http://students.washington.edu/alexhngo/info343/Everything-Sports/"><img id="webpic" src="../../img/projects/120px-Emblem-web.svg.png">
+                </a>
+                <a href="https://github.com/NgoKnows/Everything-Sports"><img id="gitpic" src="../../img/projects/github.png">
+                </a>
             </div>
         </section>
         <section>
-            <iframe id="projectvideo" width="560" height="315" src="https://www.youtube.com/embed/0BSumrB_Vz8" frameborder="0" allowfullscreen></iframe>
-</iframe>
+            <iframe id="projectvideo" src="https://www.youtube.com/embed/0BSumrB_Vz8" frameborder="0" allowfullscreen></iframe>
         </section>
-        <section class="writing">
+        <section class="writing shift">
             <p>This was a web application I made for my final project in my Web Development class. There were no strict criteria, just to apply the things we learned in class, and use them in our project. So I thought to myself, what is something I think would be useful for not only myself, but others as well, and I thought of my fantasy basketball team. The website I play on doesn’t have the best features, and doesn’t even allow you to sort your team based on statistics, so right there I saw a need for something to help users more easily be able to look at their team.</p>
             <p>So I first thing I needed to do was to figure out what I was going to need to accomplish this. I came to the conclusion that I would need a way to obtain player statistics because this tool is meant for users to be able to sort their team by points or assists for example. So the solution I came to was to scrape information from basketball-reference.com, and I did this by leverage my knowledge of Python since that seemed like the optimal way to obtain information from a web page.
             </p>
@@ -71,11 +63,12 @@
             <section class="code"><img src="../../img/projects/2015-02-02%2020_49_59-Fantasy%20Sports%20-%20Copy.png" class="codeimg">
             </section>
         </section>
-
-        <a href="#projectDesc2">
-            <img class="animated tada" id="rightarrow" src="../../img/arrows/arrow-right3.svg">
-        </a>
     </main>
+    <div class="center-align arrows">
+        <a href="#projectDesc2">
+            <img class="right-align" id="rightarrow" src="../../img/arrows/arrow-right3.svg">
+        </a>
+    </div>
 </body>
 
 </html>

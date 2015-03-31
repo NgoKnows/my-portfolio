@@ -1,195 +1,175 @@
-@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
-@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css");
+@font-face {
+    font-family: Anke;
+    src: url(fonts/Anke.otf);
+}
+
+@font-face {
+    font-family: Dense;
+    src: url(fonts/Dense-Rugular.otf);
+}
+
+@font-face {
+    font-family: Moderne;
+    src: url(fonts/MODERNE.ttf);
+}
+
+@font-face {
+    font-family: Junction;
+    src: url(fonts/Junction-bold.otf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Junction;
+    src: url(fonts/Junction-light.otf);
+    font-weight: lighter;
+}
+
+@font-face {
+    font-family: Junction;
+    src: url(fonts/Junction-regular.otf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Mohave;
+    src: url(fonts/Mohave.otf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Nexa;
+    src: url(fonts/Nexa-Light.otf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Nexa;
+    src: url(fonts/Nexa-Bold.otf);
+    font-weight: bold;
+}
+
 html,
 body {
     height: 100%;
     width: 100%;
+    font-family: 'Nexa';
     margin: 0;
     padding: 0;
 }
 
-#navbar {}
+#name {
+    font-size: 3.2em;
+    margin: 0.075em;
+    display: none;
+}
+/*Navigation*/
 
-main:focus {
-    outline: none;
+#navbar {
+    display: none;
 }
 
-a:visited {
-    color: black;
+.side-nav {
+    opacity: 0.45;
+    transition-property: width;
+    transition-duration: 0.675s;
+    transition-timing-function: linear;
 }
-.side-nav{
-    opacity: 0.85;
-    transform: matrix(1, 0, 0, 1, 0, 0);
+
+ul.side-nav li {
+    font-size: 2.575em;
+    padding: 0;
+    margin-top: 1em;
+    display: none;
 }
-#small-nav{
-  min-height: 100vh;
- min-width: 5em;
-    background-color: white;
+
+i {
+    display: inline;
+    width: 1.25em;
+}
+
+li a {
+    height: 52px;
+}
+
+i:hover {
     opacity: 0.5;
-    position: fixed;
-    -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
-}
-main {
-/*    background-color: #F2F1EF;*/
 }
 
-body {
-/*    background-color: #F2F1EF;*/
+div.hidemenu {
+    display: inline-block;
 }
 
-.cur {
-    text-decoration: underline;
-}
-
-h1 {
-    color: grey;
-    text-align: center;
-    font-size: 4em;
-    font-family: 'Roboto';
-    font-weight: 400
-}
-
-h2 {
-    color: grey;
-    text-align: center;
-    font-size: 2em;
-    font-family: 'Roboto';
-    font-weight: 400
-}
-
-p {
-    text-align: center;
-}
-/*slide animations*/
-
-.slide {
-    position: absolute;
+ul.side-nav.fixed {
     left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
+    width: 80px;
 }
+/* end navigation */
 
-.slide.ng-enter,
-.slide.ng-leave {
-    -webkit-transition: all .75s ease;
-    -moz-transition: all .75s ease;
-    -o-transition: all .75s ease;
-    transition: all .75s ease;
+.hidemenu {
+    opacity: 0;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+    width: 0;
+    height: 0;
 }
+/*Navigation*/
 
 a:link {
-    color: grey;
+    color: black;
     text-decoration: none;
 }
-
-.parallax-container {
-    height: 3000px;
-}
-
-#rightarrow,
-#leftarrow {
-    opacity: 0.7;
-    position: fixed;
-    bottom: 50vh;
-    max-width: 2em;
-    max-height: 2em;
-}
-
-#rightarrow {
-    right: 0em;
-}
-
-#leftarrow {
-    left: 0em;
-}
+/*transitions*/
 
 main.ng-enter,
 main.ng-move {
-    -webkit-animation: fadeIn 1s;
-    -moz-animation: fadeIn 1s;
-    -o-animation: fadeIn 1s;
-    animation: fadeIn 1s;
+    -webkit-animation: fadeIn 1.5s;
+    -moz-animation: fadeIn 1.5s;
+    -o-animation: fadeIn 1.5s;
+    animation: fadeIn 1.5s;
 }
 
 main.ng-leave {
-    -webkit-animation: fadeOutDown 0.75s;
-    -moz-animation: fadeOutDown 0.75s;
-    -o-animation: fadeOutDown 0.75s;
-    animation: fadeOutDown 0.75s;
+    -webkit-animation: fadeOut 0.75s;
+    -moz-animation: fadeOut 0.75s;
+    -o-animation: fadeOut 0.75s;
+    animation: fadeOut 0.75s;
 }
+/*transitions*/
 
 @media screen and (min-width: 320px) {
-    h2 {
-        font-size: 1.5em;
-    }
     #hi {
-        font-size: 5em;
-    }
-    p {
-        font-size: 1.25em;
-    }
-    #leftarrow {
-        max-width: 2.5em;
-        max-height: 2.5em;
-        -webkit-animation-iteration-count: 3;
-        -moz-animation-iteration-count: 3;
-        -o-animation-iteration-count: 3;
-        animation-iteration-count: 3;
-    }
-    #rightarrow {
-        max-width: 2.5em;
-        max-height: 2.5em;
-        -webkit-animation-iteration-count: 3;
-        -moz-animation-iteration-count: 3;
-        -o-animation-iteration-count: 3;
-        animation-iteration-count: 3;
+        /*        font-size: 3.5em;*/
     }
 }
 
 @media screen and (min-width: 540px) {
-    h2 {
-        font-size: 2em;
-    }
     #hi {
-        font-size: 5em;
-        display: none;
-    }
-    p {
-        font-size: 1.75em;
-    }
-    #leftarrow,
-    #rightarrow {
-        max-width: 3.5em;
-        max-height: 3.5em;
-    }
-    #rightarrow {
-        right: 1em;
-    }
-    #leftarrow {
-        left: 1em;
+        /*        font-size: 4.25em;*/
     }
 }
 
 @media screen and (min-width: 768px) {
-    h2 {
-        font-size: 2.25em;
-    }
-    p {
-        font-size: 2em;
+    #hi {
+        /*        font-size: 5em;*/
     }
 }
 
 @media screen and (min-width: 992px) {
-    h2 {
-        font-size: 2.5em;
+    .material-tooltip {
+        z-index: -1000;
+        min-height: 500;
     }
-    p {
-        font-size: 3em;
+    ul.side-nav.fixed {
+        width: 240px;
     }
-    #leftarrow,
-    #rightarrow {
-        max-width: 4em;
-        max-height: 4em;
+    .hidemenu {
+        opacity: 1;
+        width: 1.5em;
+    }
+    #name {
+        margin-left: 0.2em;
     }
 }

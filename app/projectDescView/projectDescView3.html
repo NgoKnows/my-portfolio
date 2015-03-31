@@ -9,39 +9,34 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../css/animate.css">
     <link rel="stylesheet" href="../../css/buttons.css">
+    <link rel="stylesheet" href="../../css/materialize/css/materialize.css">
     <link rel="stylesheet" href="../../css/main.css">
     <link rel="stylesheet" href="../../css/project.css">
     <link rel="stylesheet" href="../../css/projectdesc.css">
-    <link rel="stylesheet" href="css/dist/css/flat-ui.min.css">
-    <link rel="stylesheet" href="../../css/projectdesc1.css">
-
 
 </head>
 
 <body>
-    <main id="projDescMain" class="container" tabindex="0" ng-keydown="keyPress($event, '/projectDesc2', '/projectDesc4')">
+    <main id="projDescMain">
         <header>
         </header>
 
+        <h1 class="shift">NBA Analysis and Web Crawler</h1>
+        <h2 class="shift">Analysis of phenomena in the NBA</h2>
+        <div class="parallax-container projimg">
+            <div class="parallax"><img src="../../img/projects/scatter.png">
+            </div>
+        </div>
 
-        <h1 id="projecthead">Projects</h1>
-
-        <h2>NBA Analysis and Web Crawler</h2>
-        <img src="../../img/projects/scatter.png" id="projpic" class="circular" ;>
-        <h4>Analysis of phenomena in the NBA</h4>
         <a href="#project"><span id="exit" class=" animated pulse infinite glyphicon glyphicon-remove"></span></a>
 
         <section>
-            <div class="row">
-                <figure class="col-md-12 col-sm-12 col-xs-12">
-                    <a href="https://github.com/NgoKnows/NBA-Analysis"><img id="gitpic" src="../../img/projects/github.png">
-                    </a>
-                    <div id="gitcaption"><a href="https://github.com/NgoKnows/NBA-Analysis"><h6>GitHub</h6></a>
-                    </div>
-                </figure>
+            <div class="row center-align">
+                <a href="https://github.com/NgoKnows/NBA-Analysis"><img id="gitpic" src="../../img/projects/github.png">
+                </a>
             </div>
         </section>
-        <section class="writing">
+        <section class="writing shift">
             <p> This project was my final project for my Data Programming class, which was in Python. The goal was to find a problem and find a dataset related to that problem to analyze and answer questions regarding this problem. The problem I decided to look at was to analyze certain phenomenon in the NBA, such as is the notion of a hot/cold streak a statistically quantifiable idea, also how the toll of an 82 game season can affect team performance.
             </p>
             <p>So I first set out to obtain the dataset using a crawler, which was written in Python, but much more primitive compared to the one I created in my Everything Sports application. However, I do see it as a good learning experience, because up to that point I had no idea how to crawl a webpage. I think another challenge at that point was that I didn’t know HTML so didn’t understand the hierarchy of pages and instead just had to do it blindly. The result was that the data that it obtained was highly unnormalized, so I had to find an alternative data source.</p>
@@ -49,16 +44,16 @@
             <p>Once the data was formatted, I used it in various ways, such as analyzing shot locations, and creates a scatterplot as well as a heat map of those shot locations for each season. Not only this, but I also examined the notion of a cold/hot streak, to see if it was a true phenomenon with data to back it. Finally I also looked at team’s turnover rate before and after the halfway point in the season (all-star break). </p>
             <p>Although the methodology may not have been perfect, it was a good learning experience on how to handle and analyze large amount of data. I learned a lot of different things, including using matplotlib, pylab, and numpy to analyze large amount of information.
             </p>
-
         </section>
-        </section>
-        <a href="#projectDesc1">
+    </main>
+    <div class="center-align arrows">
+        <a href="#projectDesc2">
             <img class="animated tada" id="leftarrow" src="../../img/arrows/arrow-left3.svg">
         </a>
-        <a href="#projectDesc3">
+        <a href="#projectDesc4">
             <img class="animated tada" id="rightarrow" src="../../img/arrows/arrow-right3.svg">
         </a>
-    </main>
+    </div>
 </body>
 
 </html>

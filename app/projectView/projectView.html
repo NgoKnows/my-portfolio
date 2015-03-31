@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../css/animate.css">
     <link rel="stylesheet" href="../../css/buttons.css">
+    <link rel="stylesheet" href="css/materialize/css/materialize.css">
     <link rel="stylesheet" href="../../css/main.css">
     <link rel="stylesheet" href="../../css/project.css">
 
@@ -16,42 +17,53 @@
 </head>
 
 <body>
-    <main id="projectMain" tabindex="0" ng-keydown="keyPress($event)">
+    <main id="projectMain">
         <header>
         </header>
         <section>
 
-<!--
-            <div id="navbar">
-                <span class="navbutton"><a href="#home"> Home</a></span>
-                <span class="navbutton"><a href="#about">About</a></span>
-                <span class="navbutton cur"><a href="#project">Projects</a></span>
-                <span class="navbutton"><a href="../../img/Alex%20Ngo's%20Resume.pdf">Resume</a></span>
-            </div>
--->
             <h1 id="projecthead">Projects</h1>
-
-            <div class="projects row">
-                <div class="project col-md-3" ng-repeat="project in projectList">
+<ul class="section table-of-contents">
+           <li ng-repeat="project in projectNames"><a href="#{{ projectLinks[$index] }}" class="#{{ projectLinks[$index] }}" ng-class="{active: $index==0}">{{project}}</a></li>
+<!--
+            <li><a href="#initialization" class="">Initialization</a></li>
+            <li><a href="#options" class="">Options</a></li>
+-->
+          </ul>
+<!--            <div class="projects row">-->
+                <div ng-repeat="project in projectList" id="{{ projectLinks[$index] }}" class="section scrollspy">
+                <div class="project">
+                <a ng-href="{{ projectDescLinks[$index] }}"><div class="parallax-container projimg" ng-init="$last ? parallax() : null">
+      <div id="{{project.name}}" class="parallax"><img src="{{project.picture}}"></div>
+            </div></a>
+                    <h2 class="projname"><a ng-href="{{ projectDescLinks[$index] }}">{{project.name}}</a></h2>
+            <h4 class="projdesc">"{{project.desc}}"</h4>
+            <h5 class="techhead">Built With:</h5>
+            <div class="techcontainer">
+                        <span ng-repeat="tech in project.technology"><img popover="{{getLabel(tech)}}" popover-trigger="mouseenter"  class="tech" ng-src="{{getTech(tech)}}"><div class="label" ng-attr-id="{{ 'label' + $parent.$index + $index }}"></div></span>
+                    </div></div>
+<!--
                     <div class="overlay circular">
                         <img class="circular projectImg" src="{{project.picture}}" ng-mouseover="showOverlay($index, true)" ng-mouseleave="showOverlay($index, false)" ng-attr-id="{{'img' + $index}}">
                         <a href="{{ projectLinks[$index] }}" class="button button-pill button-small" ng-mouseover="showOverlay($index, true)" ng-mouseleave="showOverlay($index, false)" ng-attr-id="{{ 'button' + $index }}">
                             <p>Learn More!</p>
                         </a>
                     </div>
+-->
 
-                    <a href="{{ projectLinks[$index] }}"><h2 class="projdesclink">{{project.name}}</h2></a>
-                    <h4>{{project.desc}}</h4>
-                    <h6 class="built">Built With:</h6>
+<!--                    <a href="{{ projectLinks[$index] }}"><h2 class="projdesclink">{{project.name}}</h2></a>-->
+<!--                    <h4>{{project.desc}}</h4>-->
+<!--                    <h6 class="built">Built With:</h6>-->
+<!--
                     <div class="techcontainer">
                         <span ng-repeat="tech in project.technology"><img popover="{{getLabel(tech)}}" popover-trigger="mouseenter"  class="tech" ng-src="{{getTech(tech)}}" ng-mouseover="showLabel($parent.$index, $index, true)" ng-mouseleave="showLabel($parent.$index, $index, false)"><div class="label" ng-attr-id="{{ 'label' + $parent.$index + $index }}"></div></span>
                     </div>
-
+-->
+                <hr ng-show="!$last">
+                <br ng-show="$last">
+                <br ng-show="$last">
                 </div>
-            </div>
-            <a href="#about">
-                <img class="animated tada" id="leftarrow" src="../../img/arrows/arrow-left3.svg">
-            </a>
+<!--            </div>-->
         </section>
     </main>
 </body>

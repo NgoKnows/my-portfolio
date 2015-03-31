@@ -15,3 +15,18 @@ angular.module('myPortfolio', [
                 redirectTo: '/homeView'
             });
 }]);
+
+$(document).ready(function() {
+    setTimeout(function(){
+        $('#navbar').show(1200);
+        setTimeout(function(){
+            $('#name').show(900)
+        }, 650)
+        setTimeout(function(){
+            $('.menuitem').show(900)
+        }, 650)
+    }, 500);
+});
+
+
+

@@ -2066,6 +2066,7 @@ img.responsive-img, video.responsive-video {
     width: 100%; }
 
 @media only screen and (max-width : 992px) {
+/*
   .parallax-container {
     height: auto; }
 
@@ -2074,6 +2075,7 @@ img.responsive-img, video.responsive-video {
     width: 100%; }
     .parallax img {
       position: relative; }
+*/
  }
 
 .pin-top, .pin-bottom {
@@ -5591,7 +5593,7 @@ ul.tabs li.tab {
 
 .material-tooltip {
   padding: 10px 8px;
-  font-size: 1rem;
+  font-size: 2rem;
   z-index: 1000;
   background-color: transparent;
   -webkit-border-radius: 2px;
@@ -5600,7 +5602,7 @@ ul.tabs li.tab {
   background-clip: padding-box;
   color: #fff;
   min-height: 36px;
-  line-height: 1rem;
+  line-height: 1.5rem;
   opacity: 0;
   display: none;
   position: absolute;
@@ -6700,11 +6702,11 @@ ul.table-of-contents a {
   ul.table-of-contents a:hover {
     color: #a8a8a8;
     padding-left: 19px;
-    border-left: 1px solid #ea4a4f; }
+    border-left: 1px solid #c0392b; }
   ul.table-of-contents a.active {
     font-weight: 500;
     padding-left: 18px;
-    border-left: 2px solid #ea4a4f; }
+    border-left: 2px solid #c0392b; }
 
 ul.side-nav {
   position: fixed;

@@ -36,7 +36,10 @@ angular.module('myPortfolio.projectDescView', ['ngRoute'])
                 $location.path(right);
             }
         }
-
+        $scope.parallax = function () {
+            $('.parallax').parallax();
+        }
+        $scope.parallax();
         $scope.$on('$viewContentLoaded', function () {
             setTimeout(function () {
                 $("projDescMain").focus();
