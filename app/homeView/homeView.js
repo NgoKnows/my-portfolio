@@ -11,6 +11,9 @@ angular.module('myPortfolio.homeView', ['ngRoute'])
 
         $scope.$on('$viewContentLoaded', function () {
             setTimeout(function () {
+                $(this).scrollTop(0);
+            }, 10);
+            setTimeout(function () {
                 $('#hi').fadeIn(1200);
             }, 500);
 //            $('.button-collapse').sideNav({
