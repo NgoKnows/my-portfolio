@@ -23,18 +23,21 @@
     display: inline-block;
     font-size: 1.75em;
     margin-bottom: 0;
-    padding-left: .2em;
+    padding-left: .25em;
 }
 
 .projdesc {
     font-size: 1em;
     color: grey;
     margin: 0;
-    padding-left: .2em;
+    padding-left: .25em;
 }
 
 .techhead {
     font-size: 1em;
+}
+.techhead, .techcontainer{
+    padding-left: .5em;
 }
 /*table of contents*/
 
