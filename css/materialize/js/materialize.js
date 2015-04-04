@@ -39,7 +39,7 @@
  * OF THE POSSIBILITY OF SUCH DAMAGE.
  *
 */
-
+var Materialize = {};
 // t: current time, b: begInnIng value, c: change In value, d: duration
 jQuery.easing['jswing'] = jQuery.easing['swing'];
 
@@ -2976,7 +2976,7 @@ $(document).ready(function(){
     var time = 0;
 
     // Horizontal staggered list
-    showStaggeredList = function(selector) {
+    Materialize.showStaggeredList = function(selector) {
       $(selector).find('li').velocity(
           { translateX: "-100px"},
           { duration: 0 });
