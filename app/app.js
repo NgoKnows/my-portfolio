@@ -16,17 +16,20 @@ angular.module('myPortfolio', [
             });
 }]);
 
-$(document).ready(function() {
-    setTimeout(function(){
+$(document).ready(function () {
+    setTimeout(function () {
         $('#navbar').show(1200);
-        setTimeout(function(){
+        setTimeout(function () {
             $('#name').show(900)
         }, 650)
-        setTimeout(function(){
+        setTimeout(function () {
             $('.menuitem').show(900)
         }, 650)
     }, 500);
+    $(window).scroll(function () {
+        $("#navbar").stop().animate({
+            "marginTop": ($(window).scrollTop()) + "px",
+            "marginLeft": ($(window).scrollLeft()) + "px"
+        }, "slow");
+    });
 });
-
-
-
