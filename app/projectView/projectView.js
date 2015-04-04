@@ -7,7 +7,7 @@ angular.module('myPortfolio.projectView', ['ngRoute'])
                 controller: 'ProjectController'
             });
 }])
-    .controller('ProjectController', function ($scope, $location, $anchorScroll) {
+    .controller('ProjectController', function ($scope, $location) {
         //name, desc, link, technology
         $scope.projectList = projectList;
         $scope.techImages = ["../../img/logos/android.svg", "../../img/logos/java.svg", "../../img/logos/python.svg", "../../img/logos/html.svg", "../../img/logos/javascript.svg", "../../img/logos/css.svg", "../../img/logos/angular.svg", "../../img/logos/d3.svg", "../../img/logos/google-maps.svg"];
@@ -27,8 +27,9 @@ angular.module('myPortfolio.projectView', ['ngRoute'])
         }
         $scope.$on('$viewContentLoaded', function () {
             setTimeout(function () {
-                $("#projectMain").focus();
                 $(this).scrollTop(0);
+            }, 10);
+            setTimeout(function () {
                 $('a').click(function () {
                     $('html, body').animate({
                         scrollTop: $($(this).attr('class').split(' ')[0]).offset().top
