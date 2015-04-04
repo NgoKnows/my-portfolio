@@ -1,43 +1,4 @@
 @font-face {
-    font-family: Anke;
-    src: url(fonts/Anke.otf);
-}
-
-@font-face {
-    font-family: Dense;
-    src: url(fonts/Dense-Rugular.otf);
-}
-
-@font-face {
-    font-family: Moderne;
-    src: url(fonts/MODERNE.ttf);
-}
-
-@font-face {
-    font-family: Junction;
-    src: url(fonts/Junction-bold.otf);
-    font-weight: bold;
-}
-
-@font-face {
-    font-family: Junction;
-    src: url(fonts/Junction-light.otf);
-    font-weight: lighter;
-}
-
-@font-face {
-    font-family: Junction;
-    src: url(fonts/Junction-regular.otf);
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: Mohave;
-    src: url(fonts/Mohave.otf);
-    font-weight: normal;
-}
-
-@font-face {
     font-family: Nexa;
     src: url(fonts/Nexa-Light.otf);
     font-weight: normal;
@@ -70,17 +31,24 @@ body {
 }
 
 .side-nav {
+    position: relative;
     opacity: 0.45;
+    color: rgba(0, 0, 0, 1);
     transition-property: width;
     transition-duration: 0.675s;
     transition-timing-function: linear;
 }
 
 ul.side-nav li {
-    font-size: 2.575em;
     padding: 0;
-    margin-top: 1em;
+    margin-top: 1.75em;
+    margin-bottom: 2em;
     display: none;
+}
+
+#navbar.side-nav.fixed a {
+    color: rgba(0, 0, 0, 1);
+    font-size: 2.55em;
 }
 
 i {
@@ -103,6 +71,9 @@ div.hidemenu {
 ul.side-nav.fixed {
     left: 0;
     width: 80px;
+    position: absolute;
+    height: 100vh;
+    overflow:hidden;
 }
 /* end navigation */
 
