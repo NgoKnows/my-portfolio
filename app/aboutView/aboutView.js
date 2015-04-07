@@ -12,15 +12,32 @@ angular.module('myPortfolio.aboutView', ['ngRoute'])
             setTimeout(function () {
                 $(this).scrollTop(0);
             }, 10);
-//            $(window).resize(function () {
-//                if(
-//            });
             setTimeout(function () {
-                Materialize.showStaggeredList('#skills');
-                setTimeout(function () {
-                    $('#skills').show(1500);
-                }, 1000);
+                $('#skills').show(1500);
+                // Horizontal staggered list
+                var time = 0;
 
-            }, 1500);
+                var showStaggeredList = function (selector) {
+                    $(selector).find('li').velocity({
+                        translateX: "-100px"
+                    }, {
+                        duration: 0
+                    });
+
+                    $(selector).find('li').each(function () {
+                        $(this).velocity({
+                            opacity: "1",
+                            translateX: "0"
+                        }, {
+                            duration: 800,
+                            delay: time,
+                            easing: [60, 10]
+                        });
+                        time += 120;
+                    });
+                }
+                showStaggeredList('#skills');
+
+            }, 1000);
         });
     });
