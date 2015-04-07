@@ -17,19 +17,29 @@ angular.module('myPortfolio', [
 }]);
 
 $(document).ready(function () {
+    var size = $(window).width();
+    $('html').addClass('noScroll')
     setTimeout(function () {
-        $('#navbar').show(1200);
+        $('#navbar').velocity("slideDown", { duration: 1250 })
         setTimeout(function () {
-            $('#name').show(900)
-        }, 650)
+            $('#name').velocity("fadeIn", { delay: 500, duration: 1500 });
+        }, 650);
         setTimeout(function () {
-            $('.menuitem').show(900)
-        }, 650)
-    }, 500);
+           $('html').removeClass('noScroll');
+        }, 1250);
+        setTimeout(function () {
+            $('.menuitem').velocity("fadeIn", { delay: 500, duration: 1500 });
+        }, 600)
+    }, 300);
+    var navbar = $("#navbar")
+    $(window).resize(function () {
+        size = $(window).width();
+    });
     $(window).scroll(function () {
-        $("#navbar").stop().animate({
-            "marginTop": ($(window).scrollTop()) + "px",
-            "marginLeft": ($(window).scrollLeft()) + "px"
-        }, "slow");
+        //if (size < 992) {
+            navbar.velocity("stop").velocity({
+                "marginTop": ($(window).scrollTop()) + "px"
+            }, 400);
+       // }
     });
 });
