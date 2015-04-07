@@ -14,7 +14,7 @@ h4 {
 
 #abouthead {
     color: lightgray;
-    opacity: 0.8;
+    opacity: 0.81;
 }
 
 #aboutname {
@@ -56,18 +56,19 @@ lh {
 }
 
 #skills li {
-    font-size: 2.0em;
+    font-size: 2em;
 }
 
 #js {
     display: inline-block;
 }
 .imglink{
-    font-size: 2.5em
+    font-size: 2.5em;
+    margin-top: 25px;
 }
 @media screen and (min-width: 320px) {
     #skills li {
-        font-size: 2.8em;
+        font-size: 2.4em;
     }
     lh {
     font-size: 4em;
@@ -82,7 +83,7 @@ lh {
         font-size: 4em;
     }
     #skills li {
-        font-size: 2em;
+        font-size: 3em;
     }
     p {
     font-size: 1.2em
@@ -100,7 +101,7 @@ lh {
         font-size: 5em;
     }
     #skills li {
-        font-size: 2.5em;
+        font-size: 3.25em;
     }
     p {
         font-size: 1.45em
