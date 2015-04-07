@@ -7,9 +7,6 @@ body {
 }
 #intro {
     background: url(../img/m6rT4MYFQ7CT8j9m2AEC_JakeGivens%20-%20Sunset%20in%20the%20Park.jpg) no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
     min-height: 100vh;
 }
@@ -18,7 +15,7 @@ body {
     color: white;
     text-align: center;
     background-color: black;
-    opacity: .5;
+    opacity: .51;
     width: 55%;
     position: absolute;
     bottom: 50vh;
