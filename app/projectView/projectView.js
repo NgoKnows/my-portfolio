@@ -30,10 +30,9 @@ angular.module('myPortfolio.projectView', ['ngRoute'])
                 $(this).scrollTop(0);
             }, 10);
             setTimeout(function () {
-                $('a').click(function () {
-                    $('html, body').animate({
-                        scrollTop: $($(this).attr('class').split(' ')[0]).offset().top
-                    }, 500);
+                $('.table-of-contents a').click(function () {
+                    console.log($(this).attr('href'));
+                    $($(this).attr('href')).velocity("scroll", {easing:'ease', duration:1200});
                     return false;
                 });
                 $('.scrollspy').scrollSpy();
