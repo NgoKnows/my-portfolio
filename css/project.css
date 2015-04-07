@@ -1,6 +1,5 @@
 .project {
     width: 100%;
-    /*    margin-bottom: 5em;*/
 }
 
 .projects {
@@ -43,7 +42,7 @@
 
 .table-of-contents {
     position: fixed;
-    right: 20px;
+    right: 15px;
     display: none;
 }
 
@@ -67,7 +66,7 @@
     padding-bottom: 2em;
 }
 
-.tech:hover, .projimg:hover, .projname:hover{
+.tech:hover, .projimg:hover, .projname:hover, .tech:focus, .projimg:focus, .projname:focus{
     opacity: 0.75;
     text-decoration: underline;
 }
@@ -156,9 +155,6 @@ hr {
 }
 
 @media screen and (min-width: 1224px) {
-    .table-of-contents {
-        right: 30px;
-    }
     .tech {
         max-height: 4.2em;
         max-width: 4.2em;
