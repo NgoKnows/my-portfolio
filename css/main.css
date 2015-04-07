@@ -20,7 +20,7 @@ body {
 }
 
 #name {
-    font-size: 3.2em;
+    font-size: 3.1em;
     margin: 0.075em;
     display: none;
 }
@@ -34,15 +34,20 @@ body {
     position: relative;
     opacity: 0.45;
     color: rgba(0, 0, 0, 1);
+
+    -webkit-transition-property: width;
+
     transition-property: width;
+    -webkit-transition-duration: 0.675s;
     transition-duration: 0.675s;
+    -webkit-transition-timing-function: linear;
     transition-timing-function: linear;
 }
 
 ul.side-nav li {
     padding: 0;
     margin-top: 1.75em;
-    margin-bottom: 2em;
+    margin-bottom: 2.25em;
     display: none;
 }
 
@@ -53,7 +58,8 @@ ul.side-nav li {
 
 i {
     display: inline;
-    width: 1.25em;
+    width: 1.2em;
+    margin-left: .1em;
 }
 
 li a {
@@ -70,22 +76,25 @@ div.hidemenu {
 
 ul.side-nav.fixed {
     left: 0;
-    width: 80px;
+    width: 75px;
     position: absolute;
-    height: 100vh;
-    overflow:hidden;
+    height: 99.5vh;
+    overflow: hidden;
 }
 /* end navigation */
 
 .hidemenu {
     opacity: 0;
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    transition: all 1s ease;
+    -webkit-transition: all .9s ease;
+    transition: all .9s ease;
     width: 0;
     height: 0;
 }
+
+.noScroll{
+    overflow-y: hidden;
+}
+*/
 /*Navigation*/
 
 a:link {
@@ -96,37 +105,20 @@ a:link {
 
 main.ng-enter,
 main.ng-move {
-    -webkit-animation: fadeIn 1.5s;
-    -moz-animation: fadeIn 1.5s;
-    -o-animation: fadeIn 1.5s;
-    animation: fadeIn 1.5s;
+    -webkit-animation: fadeIn 1.2s ease-in;
+    animation: fadeIn 1.2s ease-in;
 }
 
 main.ng-leave {
-    -webkit-animation: fadeOut 0.75s;
-    -moz-animation: fadeOut 0.75s;
-    -o-animation: fadeOut 0.75s;
-    animation: fadeOut 0.75s;
+    animation: fadeOut 0.8s ease;
+    -webkit-animation: fadeOut 0.8s ease;
 }
 /*transitions*/
+@media screen and (min-width: 320px) {}
 
-@media screen and (min-width: 320px) {
-    #hi {
-        /*        font-size: 3.5em;*/
-    }
-}
+@media screen and (min-width: 540px) {}
 
-@media screen and (min-width: 540px) {
-    #hi {
-        /*        font-size: 4.25em;*/
-    }
-}
-
-@media screen and (min-width: 768px) {
-    #hi {
-        /*        font-size: 5em;*/
-    }
-}
+@media screen and (min-width: 768px) {}
 
 @media screen and (min-width: 992px) {
     .material-tooltip {
@@ -139,8 +131,14 @@ main.ng-leave {
     .hidemenu {
         opacity: 1;
         width: 1.5em;
+        -webkit-transition-delay: .1s;
+        transition-delay: .1s;
     }
     #name {
         margin-left: 0.2em;
+    }
+    #navbar {
+    position: fixed;
+    margin-top: 0 !important;
     }
 }
