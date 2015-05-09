@@ -21,8 +21,9 @@ body {
 
 #name {
     font-size: 3.1em;
-    margin: 0.075em;
+    margin: 0.08em;
     display: none;
+    padding-bottom: 0.15em;
 }
 /*Navigation*/
 
@@ -34,9 +35,7 @@ body {
     position: relative;
     opacity: 0.45;
     color: rgba(0, 0, 0, 1);
-
     -webkit-transition-property: width;
-
     transition-property: width;
     -webkit-transition-duration: 0.675s;
     transition-duration: 0.675s;
@@ -54,6 +53,7 @@ ul.side-nav li {
 #navbar.side-nav.fixed a {
     color: rgba(0, 0, 0, 1);
     font-size: 2.55em;
+    text-decoration: none;
 }
 
 i {
@@ -78,27 +78,30 @@ ul.side-nav.fixed {
     left: 0;
     width: 75px;
     position: absolute;
-    height: 99.5vh;
+    height: 99vh;
     overflow: hidden;
 }
 /* end navigation */
 
 .hidemenu {
     opacity: 0;
-    -webkit-transition: all .9s ease;
-    transition: all .9s ease;
+    -webkit-transition: .9s ease;
+    transition: .9s ease;
     width: 0;
     height: 0;
+    font-size: 0em;
+    line-height: 0;
 }
 
-.noScroll{
+.noScroll {
     overflow-y: hidden;
 }
+
 */
 /*Navigation*/
 
-a:link {
-    color: black;
+a.waves-effect {
+    color: pink;
     text-decoration: none;
 }
 /*transitions*/
@@ -114,6 +117,7 @@ main.ng-leave {
     -webkit-animation: fadeOut 0.8s ease;
 }
 /*transitions*/
+
 @media screen and (min-width: 320px) {}
 
 @media screen and (min-width: 540px) {}
@@ -121,6 +125,9 @@ main.ng-leave {
 @media screen and (min-width: 768px) {}
 
 @media screen and (min-width: 992px) {
+    #nameSpan {
+        margin-left: 0.2em;
+    }
     .material-tooltip {
         z-index: -1000;
         min-height: 500;
@@ -130,15 +137,18 @@ main.ng-leave {
     }
     .hidemenu {
         opacity: 1;
+        font-size: 1em;
+        line-height: 1em;
         width: 1.5em;
         -webkit-transition-delay: .1s;
         transition-delay: .1s;
     }
     #name {
         margin-left: 0.2em;
+        padding-bottom: 0.18em;
     }
     #navbar {
-    position: fixed;
-    margin-top: 0 !important;
+        position: fixed;
+        margin-top: 0 !important;
     }
 }
