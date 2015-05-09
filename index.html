@@ -4,25 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="I'm Alex Ngo, student, programmer, lifelong learner, come learn more about me!">
     <title>Alex Ngo</title>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
-    <link rel="stylesheet" href="../../css/animate.css">
-    <link rel="stylesheet" href="css/materialize/css/materialize.css">
+    <link rel="stylesheet" href="../../css/animate.min.css">
+    <link rel="stylesheet" href="css/materialize/css/materialize.min.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body ng-app="myPortfolio">
     <ul id="navbar" class="side-nav fixed">
-        <div id="name"><span>A</span><div class="hidemenu hidename">lex</div><span>N</span><div class="hidemenu hidename">go</div>
+        <div id="name"><span>A</span><span class="hidemenu hidename">lex</span><span id="nameSpan">N</span><span class="hidemenu hidename">go</span>
         </div>
-        <li data-position="right" data-delay="30" data-tooltip="Home" class="menuitem tooltipped"><a class="waves-effect" href="#home"><i class="fa fa-home"></i> <div class="hidemenu">Home</div></a>
+        <li data-position="right" data-delay="25" data-tooltip="Home" id="homemenu" class="menuitem tooltipped"><a class="waves-effect" href="#home"><i class="fa fa-home"></i> <span class="hidemenu">Home</span></a>
         </li>
-        <li data-position="right" data-delay="30" data-tooltip="About" class="menuitem tooltipped"><a class="waves-effect" href="#about"><i class="fa fa-user"></i>  <div class="hidemenu">About</div></a>
+        <li data-position="right" data-delay="25" data-tooltip="About" id="aboutmenu" class="menuitem tooltipped"><a class="waves-effect" href="#about"><i class="fa fa-user"></i>  <span class="hidemenu">About</span></a>
         </li>
-        <li data-position="right" data-delay="30" data-tooltip="Projects" class="menuitem tooltipped"><a class="waves-effect" href="#project"><i class="fa fa-code"></i> <div class="hidemenu">Projects</div></a>
+        <li data-position="right" data-delay="25" data-tooltip="Projects" id="projectmenu" class="menuitem tooltipped"><a class="waves-effect" href="#project"><i class="fa fa-code"></i> <span class="hidemenu">Projects</span></a>
         </li>
-        <li data-position="right" data-delay="30" data-tooltip="Resume" class="menuitem tooltipped"><a class="waves-effect" href="img/Alex%20Ngo's%20Resume.pdf"><i class="fa fa-file-text"></i> <div class="hidemenu">Resume</div></a>
+        <li data-position="right" data-delay="25" data-tooltip="Resume" class="menuitem tooltipped"><a class="waves-effect" href="img/Alex%20Ngo's%20Resume.pdf"><i class="fa fa-file-text"></i> <span class="hidemenu">Resume</span></a>
         </li>
     </ul>
     <span id="small-nav"></span>
@@ -36,7 +37,7 @@
     <script src="https://code.angularjs.org/1.3.9/angular-route.min.js"></script>
     <script src="https://code.angularjs.org/1.3.9/angular-animate.min.js"></script>
     <script src="app/ui-bootstrap-tpls-0.12.0.min.js"></script>
-    <script src="css/materialize/js/materialize.js"></script>
+    <script src="css/materialize/js/materialize.min.js"></script>
     <script src="app/homeView/homeView.js"></script>
     <script src="app/aboutView/aboutView.js"></script>
     <script src="app/projectView/project.js"></script>
