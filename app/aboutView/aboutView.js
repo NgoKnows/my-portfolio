@@ -9,6 +9,7 @@ angular.module('myPortfolio.aboutView', ['ngRoute'])
 }])
     .controller('AboutController', function ($scope) {
         $scope.$on('$viewContentLoaded', function () {
+            $('#aboutmenu').addClass('active');
             setTimeout(function () {
                 $(this).scrollTop(0);
             }, 10);
