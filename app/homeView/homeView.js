@@ -10,6 +10,7 @@ angular.module('myPortfolio.homeView', ['ngRoute'])
     .controller('HomeController', function ($scope, $location) {
 
         $scope.$on('$viewContentLoaded', function () {
+            $('#homemenu').addClass('active');
             setTimeout(function () {
                 $(this).scrollTop(0);
             }, 10);
