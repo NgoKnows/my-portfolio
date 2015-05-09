@@ -18,6 +18,10 @@ angular.module('myPortfolio', [
 
 $(document).ready(function () {
     var size = $(window).width();
+    $('.menuitem').click(function(){
+       $('.menuitem').removeClass('active');
+    $(this).addClass('active');
+    });
     $('html').addClass('noScroll')
     setTimeout(function () {
         $('#navbar').velocity("slideDown", { duration: 1250 })
@@ -31,13 +35,14 @@ $(document).ready(function () {
             $('.menuitem').velocity("fadeIn", { delay: 500, duration: 1500 });
         }, 600)
     }, 300);
-    var navbar = $("#navbar")
-    $(window).resize(function () {
+    var $navbar = $("#navbar");
+    var $window = $(window);
+    $window.resize(function () {
         size = $(window).width();
     });
-    $(window).scroll(function () {
+    $window.scroll(function () {
         //if (size < 992) {
-            navbar.velocity("stop").velocity({
+            $navbar.velocity("stop").velocity({
                 "marginTop": ($(window).scrollTop()) + "px"
             }, 400);
        // }
