@@ -94,6 +94,9 @@ h2 {
     margin-top: 0;
     padding-left: 0.5em;
 }
+h4{
+    text-align: center;
+}
 
 @media screen and (min-width: 320px) {
     #projpic {
@@ -183,7 +186,7 @@ h2 {
         }
         section p {
             text-align: left;
-            font-size: 1.1em;
+            font-size: 1.5em;
         }
         #projectvideo {
             height: 20vw;
