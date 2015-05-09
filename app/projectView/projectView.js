@@ -26,6 +26,7 @@ angular.module('myPortfolio.projectView', ['ngRoute'])
             $('.parallax').parallax();
         }
         $scope.$on('$viewContentLoaded', function () {
+            $('#projectmenu').addClass('active');
             setTimeout(function () {
                 $(this).scrollTop(0);
             }, 10);
