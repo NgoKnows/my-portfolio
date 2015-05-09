@@ -46,19 +46,19 @@
             <p>So how I did this specifically was by utilizing the Beautiful Soup library, which provides methods to help parse a web page’s html. I had to first analyze the html of the page that I was scraping and understand the structure of the page. Once I understood the structure, then I used Beautiful Soup to search for certain tags and be able to extract the specific information I am looking for. Some problems I ran into were some special cases such as a field being blank which I had to replace with “0”, also I had to change the encoding of the text to ASCII for it to store correctly. </p>
             <p> Once the page was parsed, I put each individual player’s statistics in a dictionary with keys being the statistic name (i.e. “FG% or Pts”), and I placed that within a dictionary under the key “stats”, and placed another key/value pair, representing their name. The new dictionary is then placed within a list which is then outputted as a JSON file.
             </p>
-            <section class="code"><img src="../../img/projects/2015-02-03%2012_45_55-getPlayers%20-%20%5BC__Users_Alex_PycharmProjects_getPlayers%5D%20-%20..._getPlayers.py%20-%20Py.png" class="codeimg">
+            <section class="code"><img src="../../img/projects/2015-02-03%2012_45_55-getPlayers%20-%20%5BC__Users_Alex_PycharmProjects_getPlayers%5D%20-%20..._getPlayers.py%20-%20Py.png" class="codeimg z-depth-4">
             </section>
             <p>Then I used JavaScript to parse any text a user submits and split that text by whitespace using a RegEx. I then checked each combination of two words (a name) to see if that name was a value in my playerDictionary, and if it was, then that is a player.
             </p>
-            <section class="code"><img src="../../img/projects/2015-02-03%2021_57_26-%E2%80%A2%20Fantasy_player.js%20(Everything-Sports)%20-%20Brackets.png" class="codeimg">
+            <section class="code"><img src="../../img/projects/2015-02-03%2021_57_26-%E2%80%A2%20Fantasy_player.js%20(Everything-Sports)%20-%20Brackets.png" class="codeimg z-depth-4">
             </section>
             <p>The front-end is built on Angular, and some things I used it for are to display the table which contains the players using ng-repeat, ng-hover to highlight columns, sortBy for a custom sorting function. Also used to populate various dropdowns, especially the dropdowns containing all possible players. Ng-hide, ng-class, ng-clicks used throughout as well to provide functionality throughout the site.</p>
-            <section class="code"><img src="../../img/projects/2015-02-03%2022_02_48-%E2%80%A2%20Fantasy_index.html%20(Everything-Sports)%20-%20Brackets.png" class="codeimg">
+            <section class="code"><img src="../../img/projects/2015-02-03%2022_02_48-%E2%80%A2%20Fantasy_index.html%20(Everything-Sports)%20-%20Brackets.png" class="codeimg z-depth-4">
             </section>
-            <section class="code"><img src="../../img/projects/2015-02-03%2022_05_35-Fantasy_app.js%20(Everything-Sports)%20-%20Brackets.png" class="codeimg">
+            <section class="code"><img src="../../img/projects/2015-02-03%2022_05_35-Fantasy_app.js%20(Everything-Sports)%20-%20Brackets.png" class="codeimg z-depth-4">
             </section>
             <p>The player comparison feature came last, and was created using D3.js. I wanted to be able to visually compare players, and so I thought that using D3 would be a good way to do this. I implemented the ability to compare as many players as wanted, as well as choice of category and grouping preference.</p>
-            <section class="code"><img src="../../img/projects/2015-02-02%2020_49_59-Fantasy%20Sports%20-%20Copy.png" class="codeimg">
+            <section class="code"><img src="../../img/projects/2015-02-02%2020_49_59-Fantasy%20Sports%20-%20Copy.png" class="codeimg z-depth-4">
             </section>
         </section>
     </main>
