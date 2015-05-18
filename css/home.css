@@ -21,7 +21,7 @@ body {
     bottom: 50vh;
     margin-left: 36%;
     font-size: 2em;
-    display: none;
+/*    display: none;*/
 }
 
 @media screen and (min-width: 320px) {
