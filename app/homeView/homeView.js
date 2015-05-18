@@ -14,12 +14,9 @@ angular.module('myPortfolio.homeView', ['ngRoute'])
             setTimeout(function () {
                 $(this).scrollTop(0);
             }, 10);
-            setTimeout(function () {
-                $('#hi').fadeIn(1200);
-            }, 500);
-//            $('.button-collapse').sideNav({
-//                menuWidth: 300, // Default is 240
-//                edge: 'left', // Choose the horizontal origin
-//            });
+//            setTimeout(function () {
+//                $('#hi').fadeIn(1200);
+//            }, 500);
+
         });
 });
