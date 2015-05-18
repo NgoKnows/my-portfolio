@@ -10,41 +10,48 @@ angular.module('myPortfolio', [
     'myPortfolio.projectDescView'
 ])
     .config(function ($routeProvider, $locationProvider) {
-            $routeProvider.otherwise({
-                redirectTo: '/'
-            });
-//            $locationProvider.html5Mode(true);
-});
+        $routeProvider.otherwise({
+            redirectTo: '/'
+        });
+    });
 
 $(document).ready(function () {
     var size = $(window).width();
-    $('.menuitem').click(function(){
-       $('.menuitem').removeClass('active');
-    $(this).addClass('active');
+    $('.menuitem').click(function () {
+        $('.menuitem').removeClass('active');
+        $(this).addClass('active');
     });
     $('html').addClass('noScroll')
     setTimeout(function () {
-        $('#navbar').velocity("slideDown", { duration: 1250 })
+        $('#navbar').velocity("slideDown", {
+            duration: 1250
+        })
         setTimeout(function () {
-            $('#name').velocity("fadeIn", { delay: 500, duration: 1500 });
+            $('#name').velocity("fadeIn", {
+                delay: 500,
+                duration: 1500
+            });
         }, 650);
         setTimeout(function () {
-           $('html').removeClass('noScroll');
+            $('html').removeClass('noScroll');
         }, 1250);
         setTimeout(function () {
-            $('.menuitem').velocity("fadeIn", { delay: 500, duration: 1500 });
+            $('.menuitem').velocity("fadeIn", {
+                delay: 500,
+                duration: 1500
+            });
         }, 600)
     }, 300);
     var $navbar = $("#navbar");
     var $window = $(window);
     $window.resize(function () {
-        size = $(window).width();
+        size = $window.width();
     });
     $window.scroll(function () {
         //if (size < 992) {
-            $navbar.velocity("stop").velocity({
-                "marginTop": ($(window).scrollTop()) + "px"
-            }, 400);
-       // }
+        $navbar.velocity("stop").velocity({
+            "marginTop": ($window.scrollTop()) + "px"
+        }, 300);
+        // }
     });
 });
