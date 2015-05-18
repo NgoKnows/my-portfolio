@@ -2,7 +2,7 @@
 angular.module('myPortfolio.homeView', ['ngRoute'])
     .config(['$routeProvider',
         function ($routeProvider) {
-            $routeProvider.when('/homeView', {
+            $routeProvider.when('/', {
                 templateUrl: 'app/homeView/homeView.html',
                 controller: 'HomeController'
             });
