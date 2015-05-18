@@ -2,7 +2,7 @@
 angular.module('myPortfolio.projectView', ['ngRoute'])
     .config(['$routeProvider',
         function ($routeProvider) {
-            $routeProvider.when('/project', {
+            $routeProvider.when('/projects', {
                 templateUrl: 'app/projectView/projectView.html',
                 controller: 'ProjectController'
             });
