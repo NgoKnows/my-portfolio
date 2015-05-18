@@ -9,12 +9,12 @@ angular.module('myPortfolio', [
     'myPortfolio.projectView',
     'myPortfolio.projectDescView'
 ])
-    .config(['$routeProvider',
-        function ($routeProvider) {
+    .config(function ($routeProvider, $locationProvider) {
             $routeProvider.otherwise({
-                redirectTo: '/homeView'
+                redirectTo: '/'
             });
-}]);
+//            $locationProvider.html5Mode(true);
+});
 
 $(document).ready(function () {
     var size = $(window).width();
